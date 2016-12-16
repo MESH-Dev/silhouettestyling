@@ -28,6 +28,11 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
+	<!-- Typekit
+	================================================== -->
+	<script src="https://use.typekit.net/poz6gzr.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 	<?php wp_head(); ?>
 
 </head>
@@ -37,13 +42,34 @@
 	<div id="page" class='hfeed site'>
 
 		<header>
-			<div class="container">
+			<div class=""><!-- container -->
 
-				<div class="twelve columns">
-					<div class="logo">
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					</div>
+				<!-- <div class="">twelve columns 
 					<nav class="main-navigation">
+						<div class="container">
+						<?php $split_nav = get_split_nav('main_nav');
+
+						//render left nav
+						echo $split_nav->left_menu; ?>
+						
+						<div class="logo two columns">
+							<img src="<?php bloginfo( 'template_directory' ); ?>/img/logo/navigation-xo@3x.png">
+						</div>
+						
+						<?php
+						//render right nav
+						echo $split_nav->right_menu;
+
+						?>
+						</div>
+					</nav> -->
+					<!-- 
+						<img src="<?php bloginfo( 'template_directory' ); ?>/img/logo/navigation-xo@3x.png">
+						<h1 class="site-title">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						</h1> 
+					</div> -->
+					<!-- <nav class="main-navigation">
 						<?php if(has_nav_menu('main_nav')){
 									$defaults = array(
 										'theme_location'  => 'main_nav',
@@ -66,8 +92,8 @@
 								}else{
 									echo "<p><em>main_nav</em> doesn't exist! Create it and it'll render here.</p>";
 								} ?>
-					</nav>
-				</div>
+					</nav> -->
+				<!-- </div> -->
 
-			</div>
+			<!-- </div> -->
 		</header>

@@ -1,0 +1,331 @@
+body{
+	background-color:$gray;
+	font-family:$font-family;
+	color:$off-white;
+	height:auto !important;
+}
+
+a{
+	// font-size:1.8em;
+	color:$creme;
+	text-decoration:none;
+	//text-align:center;
+
+	&:hover,
+	&:active,
+	&:focus{
+		color:$dark-gray;
+	}
+}
+
+p{
+	font-weight:$brandon-reg;
+	font-size:1.6em;
+	line-height:1.4;
+	text-align:center;
+
+}
+
+strong{
+	font-weight:$brandon_bold;
+	text-transform:uppercase;
+}
+
+figcaption{
+	font-size:1.8em;
+	text-transform:uppercase;
+	color:$off-white;
+	width:90%;
+	display: block;
+	text-align:right;
+	font-weight: $brandon_bold;
+	letter-spacing:.3em;
+}
+
+//Header styles
+
+header{
+	position:absolute;
+	width:100%
+}
+
+.logo{
+	max-width:75px;
+	img{
+		max-width:100%;
+		height:auto;
+		margin-top:5px;
+	}
+}
+
+//Menu
+
+.main-navigation{
+	background:$dark_gray;
+	height:45px;
+	ul{
+		list-style-type: none;
+		li{
+			display:inline-block;
+			padding:10px 20px 10px 0;
+			margin:0;
+			a{
+				font-size:1.4em;
+				color:$off-white;
+				text-decoration:none;
+				text-transform:uppercase;
+
+				&:hover,
+				&:focus,
+				&:active{
+					color:$gray;
+				}
+			}
+		}
+	}
+}
+
+
+//Page layout
+.home-section{
+	height:100vh;
+	width:100%;
+	top:0;
+	margin:0;
+	position: fixed;
+	background-size:cover;
+	background-position: center center;
+	background-repeat:no-repeat;
+	display:flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: center;
+ 	background-color: #ccc;
+  	background-blend-mode: multiply;
+
+  	.logo-img{
+  		max-width:80%;
+  	}
+
+  	.down{
+  		position:absolute;
+  		width:100%;
+  		bottom:2.5em;
+  		.content{
+  			text-align:center;
+  		}
+  		img{
+  			max-width:15px;
+  		}
+  	}
+}
+
+.fullwidth{
+	background-color:$gray;
+	width:100%;
+	margin-top:100vh;
+    position: relative;
+}
+
+section{
+	position:relative;
+	//z-index:10;
+	min-height:500px;
+	margin:6em 0;
+
+	h3{
+		// width:60%;
+	}
+
+	article{
+		position:relative;
+		z-index:10;
+		// overflow:hidden;
+		height:60vh;
+	}
+
+	.section-logo{
+		//position:absolute;
+		text-align:left;
+		&.even{
+			text-align:right;
+		}
+	}
+
+	.panel-img{
+		position:absolute;
+		z-index:-1;
+		//left:initial !important;
+	}
+
+	&#mission{
+		width:80%;
+		margin:0 auto;
+		.panel-img{
+			right:10%;
+			//top:10%;
+
+		}
+
+		h3{
+			width:60%;
+		}
+	}
+
+	&#services{
+		h3{
+			// text-align:left;
+		}
+	}
+
+	&#accessories{
+		.vert-product,
+		.horiz-product{
+			position:absolute;
+
+		}
+
+		.vert-product{
+			left:15%;
+			bottom:0;
+			z-index:5;
+		}
+
+		.horiz-product{
+			right:10%;
+			top:20%;
+		}
+	}
+
+	&#tips{
+		.tip-content{
+			.tip-title{
+				text-align:center;
+			}
+		}
+	}
+
+	&#contact{
+		p{
+			text-align:left;
+		}
+
+		input{
+			border-radius:0;
+			border:2px solid $dark-gray;
+			background:$gray;
+		}
+
+		
+	}
+
+}
+
+input::-webkit-input-placeholder{
+	text-transform: uppercase;
+}
+input::-moz-placeholder{
+	text-transform: uppercase;
+}
+input:-ms-input-placeholder{
+		text-transform: uppercase;
+	}
+
+.intro{
+	text-align:center;
+	margin:2em 0 0 0;
+}
+
+
+.cta{
+	text-align:center;
+	margin:4em 0;
+	.cta-link{
+		padding-right:45px;
+		background-image:url('img/arrows/sidearrow.png');
+		background-repeat:no-repeat;
+		background-position:right center;
+		background-size:30px;
+		font-size:1.8em;
+		text-transform:uppercase;
+
+		&:hover,
+		&:focus,
+		&:active{
+			background-image:url('img/arrows/sidearrow-hover.png');
+
+		}
+	}
+}
+
+.service-container{
+	// text-align:left;
+	ul{
+		list-style-type:none;
+		li{
+			ul{
+				position:absolute;
+				right:-999999px;
+			}
+
+			&:hover,
+			&:active,
+			&:focus{
+				ul{
+					right:0;	
+				}
+			}	
+		}
+			
+	}
+
+	.service-type{
+		color:$dark-gray;
+
+		&:before{
+			content:url('img/arrows/single-asterik.png');
+		}
+	}
+}
+
+.service-content{
+	ul{
+		list-style-type: disc;
+	}
+}
+
+.product-wrapper{
+	position:relative;
+	height:80vh;
+}
+
+
+
+//Footer styles
+footer{
+	font-size:1.4em;
+	text-align:center;
+	background:$dark-gray;
+	padding:10px 0;
+	position:relative;
+	p{
+		margin:0;
+		padding:0;
+	}
+}
+
+
+//Accessibility
+.sr-only{
+	position:absolute;
+	width:1px;
+	height:1px;
+	padding:0;
+	margin:-1px;
+	overflow:hidden;
+	clip:rect(0, 0, 0, 0);
+	border:0;
+}
