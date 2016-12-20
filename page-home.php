@@ -50,7 +50,7 @@
 					<span class="sr-only">Mission</span>
 					<img alt="Mission" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/mission.png">
 				</h2>
-				<div class="panel-img" data-anchor-target="#mission" data-top="top:-2%;" data-500-top="top:15%;"><!-- data-stellar-offset-parent="true" data-stellar-ratio=".025" -->
+				<div class="panel-img overlay" data-anchor-target="#mission" data--200-top="top:-2%;" data--100-bottom="top:30%;"><!-- data-stellar-offset-parent="true" data-stellar-ratio=".025" -->
 					<img src="<?php echo $mission_panel_img_url; ?>">
 				</div>
 				<h3 class="intro"><?php echo $mission_statement; ?></h3>
@@ -67,6 +67,7 @@
 				<span class="sr-only">Mission</span>
 				<img alt="Mission" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/services.png">
 			</div>
+			
 			<h3 class="intro"><?php echo $services_intro;?></h3>
 
 				<?php while (have_rows('contact_us_cta')) : the_row(); 
@@ -79,38 +80,66 @@
 				</div>
 
 				<?php endwhile; ?>
-				<div class="row">
+				<div class="row  service-block">
 				<div class="service-container six columns">
 					<ul>
-					<?php while (have_rows('services')):the_row();
+					<?php $svc_ctr=0; 
+						while (have_rows('services')):the_row();
+						$svc_ctr++;
 						$service_title = get_sub_field('service_title');
 						$service_intro = get_sub_field('service_intro');
 						$service_content = get_sub_field('service_content');
+ 
+						$directory = get_bloginfo('template_directory');
+
+						$svc_ctr_img_1 = get_bloginfo( 'template_directory' ).'/img/arrows/custom-style.png';
+						$svc_ctr_img_2 = get_bloginfo( 'template_directory' ).'/img/arrows/style-renewal.png';
+						$svc_ctr_img_3 = get_bloginfo( 'template_directory' ).'/img/arrows/personal-shopping.png';
+						$svc_ctr_img_4 = get_bloginfo( 'template_directory' ).'/img/arrows/wardrobe.png';
+
+						$svc_ctr_image='';
+
+						if($svc_ctr == 1){
+							$svc_ctr_image = $svc_ctr_img_1;
+						}elseif ($svc_ctr==2){
+							$svc_ctr_image = $svc_ctr_img_2;
+						}elseif ($svc_ctr==3){
+							$svc_ctr_image = $svc_ctr_img_3;
+						}elseif ($svc_ctr==4){
+							$svc_ctr_image = $svc_ctr_img_4;
+						}
 					?>
-						<li> 
-							<h4><?php echo $service_title; ?></h4>
+						<li <?php if ($svc_ctr=="1"){echo 'class="active"'; }?>> 
+							<h4 class="service-title"><?php echo $service_title; ?></h4>
 							<p><?php echo $service_intro; ?></p>
 							<ul class="services-nav">
 								<li>
-									<div class="service-content">
-									<?php echo $service_content; ?>
-									</div> <!-- end service-content -->
-									<?php if(have_rows('additional_service_content')): ?>
-									<div class="additional-service-content">
-									<?php while(have_rows('additional_service_content')):the_row(); 
+									<div class="row service-sub">
+										<div class="row-arrow two columns">
+											<img src="<?php echo $svc_ctr_image; ?>">
+										</div>
+										<div class="ten columns">
+											<div class="service-content">
+											<?php echo $service_content; ?>
+											</div> <!-- end service-content -->
+											<?php if(have_rows('additional_service_content')): ?>
+											<div class="additional-service-content">
+											<?php while(have_rows('additional_service_content')):the_row(); 
 
-										$additional_service_type = get_sub_field('additional_service_type');
-										$additional_service_title = get_sub_field('additional_service_title');
-										$additional_service_content = get_sub_field('additional_service_content');
+												$additional_service_type = get_sub_field('additional_service_type');
+												$additional_service_title = get_sub_field('additional_service_title');
+												$additional_service_content = get_sub_field('additional_service_summary');
 
-										if($additional_service_type != ""){
-									?>
+												if($additional_service_type != ""){
+											?>
 
-										<h4 class="service-type"><?php echo $additional_service_type; ?><h4>
-										<h5 class="additional-service-title"><?php echo $additional_service_title; ?><h5>
-										<p> <?php echo $additional_service_content; ?>
-									<?php } endwhile; endif;?>
-									</div> <!-- end additional service info -->
+												<h4 class="service-type"><?php echo $additional_service_type; ?></h4>
+												<h5 class="additional-service-title"><?php echo $additional_service_title; ?></h5>
+												<p> <?php echo $additional_service_content; ?></p>
+											<?php } endwhile; endif;?>
+											</div> <!-- end additional service info -->
+										</div>
+									</div>
 								</li>
 							</ul>
 					<?php endwhile; ?>
@@ -118,6 +147,7 @@
 					</ul>
 				</div>
 			</div>
+		
 		</section>
 		<section id="accessories">
 			<div class="section-logo">
@@ -149,15 +179,19 @@
 				</div>
 
 				<?php endwhile; ?>
-			<p><?php echo $acc_statement; ?></p>
+			<div class="accessories-statement"><?php echo $acc_statement; ?></div>
 			<div class="row">
 				<div class="product-wrapper "><!-- eight columns -->
-					<div class="vert-product">
-						<img src="<?php echo $acc_vert_img_url; ?>">
+					<div class="vert-product" data-anchor-target="#accessories" data--100-top="bottom:-2%;" data--250-bottom="bottom:40%;">
+						<div class="overlay">
+							<img src="<?php echo $acc_vert_img_url; ?>">
+						</div>
 						<figcaption><?php echo $acc_v_img_caption ?></figcaption>
 					</div>
-					<div class="horiz-product">
-						<img src="<?php echo $acc_horz_img_url; ?>">
+					<div class="horiz-product" data-anchor-target="#accessories" data--100-top="top:20%;" data--250-bottom="top:-5%;">
+						<div class="overlay">
+							<img src="<?php echo $acc_horz_img_url; ?>">
+						</div>
 						<figcaption><?php echo $acc_h_img_caption ?></figcaption>
 					</div>
 				</div>
@@ -190,7 +224,7 @@
 
 			<?php endwhile; ?>
 
-			<div class="row">
+			<div class="row tip-block">
 				<div class="tip-content six columns">
 					<?php while(have_rows('tips')):the_row(); 
 						$tip_title = get_sub_field('tip_title');
@@ -204,8 +238,9 @@
 				</div>
 
 				<div class="polyvore six columns">
-					<script src="//urlembed.com/static/js/script.js"></script>
-					<a src="<?php echo $polyvore; ?>" /></a>
+					
+					<?php echo $polyvore; ?>
+					
 				</div>
 			</div>
 		</section>
@@ -215,7 +250,9 @@
 			$about_us_title = get_field('about_us_title');
 			$au_top = get_field('au_content_top');
 			$about_us_img = get_field('about_us_image');
-			$au_img_url = $about_us_img['sizes']['medium'];
+			//var_dump($about_us_img);
+			$au_img_url = $about_us_img['sizes']['product-portrait'];
+			//var_dump($au_img_url);
 			$au_bottom = get_field('au_content_bottom');
 			$b_statement = get_field('business_statement');
 
@@ -231,8 +268,14 @@
 			<div class="au-content-top">
 				<?php echo $au_top; ?>
 			</div>
-			<div class="au-img">
-				<img src="<?php echo $au_img_url; ?>" />
+			<div class="au-img-content" id="au-imgs">
+				<div class="au-img overlay" data-anchor-target="#about" data--200-top="top:20%;" data--250-bottom="top:-2%;">
+					<img src="<?php echo $au_img_url; ?>" />
+				</div>
+				<div class="sig-img" data-anchor-target="#about" data--200-top="bottom:-5%" data--100-bottom="bottom:40%;">
+					<img src="<?php bloginfo( 'template_directory' ); ?>/img/signature.png ">
+				</div>
+			</div>
 			<div class="au-content-bottom">
 				<?php echo $au_bottom; ?>
 			</div>
@@ -248,6 +291,22 @@
 				<?php echo do_shortcode('[contact-form-7 id="4" title="Contact form"]'); ?>
 			</div>
 		</section>
+
+		<nav class="social-nav">
+			<ul>
+				<li class="facebook">
+					<a href="#" target="_blank"><span class="sr-only"></span></a>
+				</li>
+				<li class="twitter">
+					<a href="#" target="_blank"><span class="sr-only"></span></a>
+				</li>
+				<li class="mail">
+					<a href="#" target="_blank"><span class="sr-only"></span></a>
+				</li>
+				<li class="instagram">
+					<a href="#" target="_blank"><span class="sr-only"></span></a>
+				</li>
+			</ul>
 		
 	</div> 
 	</div>

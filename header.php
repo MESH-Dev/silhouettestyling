@@ -42,58 +42,7 @@
 	<div id="page" class='hfeed site'>
 
 		<header>
-			<div class=""><!-- container -->
-
-				<!-- <div class="">twelve columns 
-					<nav class="main-navigation">
-						<div class="container">
-						<?php $split_nav = get_split_nav('main_nav');
-
-						//render left nav
-						echo $split_nav->left_menu; ?>
-						
-						<div class="logo two columns">
-							<img src="<?php bloginfo( 'template_directory' ); ?>/img/logo/navigation-xo@3x.png">
-						</div>
-						
-						<?php
-						//render right nav
-						echo $split_nav->right_menu;
-
-						?>
-						</div>
-					</nav> -->
-					<!-- 
-						<img src="<?php bloginfo( 'template_directory' ); ?>/img/logo/navigation-xo@3x.png">
-						<h1 class="site-title">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-						</h1> 
-					</div> -->
-					<!-- <nav class="main-navigation">
-						<?php if(has_nav_menu('main_nav')){
-									$defaults = array(
-										'theme_location'  => 'main_nav',
-										'menu'            => 'main_nav',
-										'container'       => false,
-										'container_class' => '',
-										'container_id'    => '',
-										'menu_class'      => 'menu',
-										'menu_id'         => '',
-										'echo'            => true,
-										'fallback_cb'     => 'wp_page_menu',
-										'before'          => '',
-										'after'           => '',
-										'link_before'     => '',
-										'link_after'      => '',
-										'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-										'depth'           => 0,
-										'walker'          => ''
-									); wp_nav_menu( $defaults );
-								}else{
-									echo "<p><em>main_nav</em> doesn't exist! Create it and it'll render here.</p>";
-								} ?>
-					</nav> -->
-				<!-- </div> -->
-
-			<!-- </div> -->
+			<?php get_template_part('/partials/main-nav')?>
+				
+					
 		</header>
