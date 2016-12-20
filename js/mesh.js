@@ -83,7 +83,7 @@ $('.logo img').hover(function(){
 // 		});
 
 $(function(){
-    var lastScrollTop = 0, delta = 15;
+    var lastScrollTop = 0, delta = 5;
     $(window).scroll(function(event){
 
        var st = $(this).scrollTop();
@@ -101,7 +101,7 @@ $(function(){
 			   // downscroll code
 			   //console.log('scroll down');
 			   //console.log(lastScrollTop + " " + st);
-			   $('.nav-bg').slideUp('slow');
+			   $('.nav-bg').stop().slideUp('slow');
 			} else {
 			  // upscroll code
 			  //console.log('scroll up');

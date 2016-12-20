@@ -397,6 +397,14 @@ section{
 				padding:0;
 				margin:0;
 			}
+
+			.wpcf7-response-output{
+				display:inline-block;
+				width:100%;
+				text-align:center;
+				border:2px solid $dark-gray;
+				font-size:1.8em;
+			}
 		}
 		
 	}
@@ -744,6 +752,8 @@ footer{
 		}
 	}
 }
+
+
 
 
 //Accessibility
