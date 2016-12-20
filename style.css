@@ -1229,100 +1229,103 @@ section#contact .contact-form p {
   margin: 0;
 }
 /* line 401, sass/modules/_main.scss */
-section#contact .contact-form .wpcf7-response-output {
+section#contact .contact-form .wpcf7-response-output.wpcf7-mail-sent-ok {
   display: inline-block;
   width: 100%;
   text-align: center;
   border: 2px solid #424146;
+  padding: 15px 0;
   font-size: 1.8em;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 @media only screen and (max-width: 500px) {
-  /* line 416, sass/modules/_main.scss */
+  /* line 419, sass/modules/_main.scss */
   section .intro {
     width: 100%;
   }
-  /* line 419, sass/modules/_main.scss */
+  /* line 422, sass/modules/_main.scss */
   section article {
     height: auto;
   }
-  /* line 423, sass/modules/_main.scss */
+  /* line 426, sass/modules/_main.scss */
   section .panel-img {
     position: static;
   }
-  /* line 428, sass/modules/_main.scss */
+  /* line 431, sass/modules/_main.scss */
   section#mission h3 {
     margin: 2em auto 0 auto;
   }
-  /* line 435, sass/modules/_main.scss */
+  /* line 438, sass/modules/_main.scss */
   section#accessories .product-wrapper {
     height: auto;
   }
-  /* line 439, sass/modules/_main.scss */
+  /* line 442, sass/modules/_main.scss */
   section#accessories .vert-product,
   section#accessories .horiz-product {
     position: static;
     margin-bottom: 2em;
     text-align: center;
   }
-  /* line 448, sass/modules/_main.scss */
+  /* line 451, sass/modules/_main.scss */
   section#tips .tip-block {
     display: block;
   }
-  /* line 454, sass/modules/_main.scss */
+  /* line 457, sass/modules/_main.scss */
   section#about .au-content-top,
   section#about .au-content-bottom {
     width: 100%;
     margin: 3em auto;
   }
-  /* line 460, sass/modules/_main.scss */
+  /* line 463, sass/modules/_main.scss */
   section#about .au-img-content {
     position: relative;
     height: auto;
     width: 100%;
     margin: 0 auto;
   }
-  /* line 467, sass/modules/_main.scss */
+  /* line 470, sass/modules/_main.scss */
   section#about .au-img {
     position: static;
   }
-  /* line 472, sass/modules/_main.scss */
+  /* line 475, sass/modules/_main.scss */
   section#about .sig-img {
     position: static;
   }
-  /* line 478, sass/modules/_main.scss */
+  /* line 481, sass/modules/_main.scss */
   section#contact .contact-form {
     width: 100%;
   }
 }
-/* line 486, sass/modules/_main.scss */
+/* line 489, sass/modules/_main.scss */
 input::-webkit-input-placeholder {
   text-transform: uppercase;
 }
 
-/* line 489, sass/modules/_main.scss */
+/* line 492, sass/modules/_main.scss */
 input::-moz-placeholder {
   text-transform: uppercase;
 }
 
-/* line 492, sass/modules/_main.scss */
+/* line 495, sass/modules/_main.scss */
 input:-ms-input-placeholder {
   text-transform: uppercase;
 }
 
-/* line 496, sass/modules/_main.scss */
+/* line 499, sass/modules/_main.scss */
 .intro {
   text-align: center;
   margin: 2em auto 0 auto;
   width: 80%;
 }
 
-/* line 504, sass/modules/_main.scss */
+/* line 507, sass/modules/_main.scss */
 .cta {
   text-align: center;
   margin: 4em 0;
 }
-/* line 507, sass/modules/_main.scss */
+/* line 510, sass/modules/_main.scss */
 .cta .cta-link {
   padding-right: 45px;
   background-image: url("img/arrows/sidearrow.png");
@@ -1332,35 +1335,35 @@ input:-ms-input-placeholder {
   font-size: 1.8em;
   text-transform: uppercase;
 }
-/* line 516, sass/modules/_main.scss */
+/* line 519, sass/modules/_main.scss */
 .cta .cta-link:hover, .cta .cta-link:focus, .cta .cta-link:active {
   background-image: url("img/arrows/sidearrow-hover.png");
 }
 
-/* line 525, sass/modules/_main.scss */
+/* line 528, sass/modules/_main.scss */
 .service-container {
   position: relative;
 }
-/* line 529, sass/modules/_main.scss */
+/* line 532, sass/modules/_main.scss */
 .service-container img {
   max-width: 100%;
   height: auto;
 }
-/* line 533, sass/modules/_main.scss */
+/* line 536, sass/modules/_main.scss */
 .service-container ul {
   list-style-type: none;
 }
-/* line 535, sass/modules/_main.scss */
+/* line 538, sass/modules/_main.scss */
 .service-container ul li {
   cursor: pointer;
 }
-/* line 538, sass/modules/_main.scss */
+/* line 541, sass/modules/_main.scss */
 .service-container ul li .service-title {
   text-align: center;
   margin: 0;
   color: #d6c8b5;
 }
-/* line 544, sass/modules/_main.scss */
+/* line 547, sass/modules/_main.scss */
 .service-container ul li ul.services-nav {
   position: absolute;
   width: 100%;
@@ -1374,33 +1377,33 @@ input:-ms-input-placeholder {
   display: -webkit-flex;
   align-items: center;
 }
-/* line 557, sass/modules/_main.scss */
+/* line 560, sass/modules/_main.scss */
 .service-container ul li ul.services-nav .service-content {
   font-size: 1.6em;
 }
-/* line 559, sass/modules/_main.scss */
+/* line 562, sass/modules/_main.scss */
 .service-container ul li ul.services-nav .service-content ul {
   margin-bottom: .5em;
 }
-/* line 583, sass/modules/_main.scss */
+/* line 586, sass/modules/_main.scss */
 .service-container ul li:hover .service-title, .service-container ul li:active .service-title, .service-container ul li:focus .service-title {
   color: #adaca5;
 }
-/* line 587, sass/modules/_main.scss */
+/* line 590, sass/modules/_main.scss */
 .service-container ul li:hover ul.services-nav, .service-container ul li:active ul.services-nav, .service-container ul li:focus ul.services-nav {
   left: 100%;
 }
-/* line 593, sass/modules/_main.scss */
+/* line 596, sass/modules/_main.scss */
 .service-container ul li.active ul.services-nav {
   left: 100%;
 }
-/* line 601, sass/modules/_main.scss */
+/* line 604, sass/modules/_main.scss */
 .service-container .service-type {
   color: #424146;
   position: relative;
   margin: 0;
 }
-/* line 606, sass/modules/_main.scss */
+/* line 609, sass/modules/_main.scss */
 .service-container .service-type:before {
   content: url("img/arrows/single-asterik.png");
   position: absolute;
@@ -1409,23 +1412,23 @@ input:-ms-input-placeholder {
 }
 
 @media only screen and (max-width: 500px) {
-  /* line 619, sass/modules/_main.scss */
+  /* line 622, sass/modules/_main.scss */
   .service-container ul li ul.services-nav {
     position: static;
     display: none;
   }
-  /* line 623, sass/modules/_main.scss */
+  /* line 626, sass/modules/_main.scss */
   .service-container ul li ul.services-nav .row-arrow {
     display: none;
   }
 }
-/* line 633, sass/modules/_main.scss */
+/* line 636, sass/modules/_main.scss */
 .service-content ul {
   list-style-type: disc;
   list-style-position: outside;
 }
 
-/* line 639, sass/modules/_main.scss */
+/* line 642, sass/modules/_main.scss */
 .service-block {
   height: 80vh;
   display: flex;
@@ -1437,32 +1440,32 @@ input:-ms-input-placeholder {
 }
 
 @media only screen and (max-width: 500px) {
-  /* line 652, sass/modules/_main.scss */
+  /* line 655, sass/modules/_main.scss */
   .service-block {
     display: block;
   }
 }
-/* line 657, sass/modules/_main.scss */
+/* line 660, sass/modules/_main.scss */
 .product-wrapper {
   position: relative;
   height: 80vh;
 }
 
 @media only screen and (max-width: 500px) {
-  /* line 663, sass/modules/_main.scss */
+  /* line 666, sass/modules/_main.scss */
   .product-wrapper {
     height: auto;
   }
 }
-/* line 670, sass/modules/_main.scss */
+/* line 673, sass/modules/_main.scss */
 .social-nav {
   text-align: center;
 }
-/* line 672, sass/modules/_main.scss */
+/* line 675, sass/modules/_main.scss */
 .social-nav ul {
   list-style-type: none;
 }
-/* line 674, sass/modules/_main.scss */
+/* line 677, sass/modules/_main.scss */
 .social-nav ul li {
   display: inline-block;
   margin-right: 2em;
@@ -1472,62 +1475,62 @@ input:-ms-input-placeholder {
   width: 53px;
   height: 53px;
 }
-/* line 683, sass/modules/_main.scss */
+/* line 686, sass/modules/_main.scss */
 .social-nav ul li.facebook {
   background: url("img/social_sprite.png") no-repeat -2px -12px;
 }
-/* line 686, sass/modules/_main.scss */
+/* line 689, sass/modules/_main.scss */
 .social-nav ul li.facebook:hover, .social-nav ul li.facebook:active, .social-nav ul li.facebook:focus {
   background: url("img/social_sprite.png") no-repeat -2px -88px;
 }
-/* line 693, sass/modules/_main.scss */
+/* line 696, sass/modules/_main.scss */
 .social-nav ul li.instagram {
   background: url("img/social_sprite.png") no-repeat -190px -12px;
 }
-/* line 696, sass/modules/_main.scss */
+/* line 699, sass/modules/_main.scss */
 .social-nav ul li.instagram:hover, .social-nav ul li.instagram:active, .social-nav ul li.instagram:focus {
   background: url("img/social_sprite.png") no-repeat -190px -88px;
 }
-/* line 704, sass/modules/_main.scss */
+/* line 707, sass/modules/_main.scss */
 .social-nav ul li.mail {
   background: url("img/social_sprite.png") no-repeat -66px -12px;
 }
-/* line 707, sass/modules/_main.scss */
+/* line 710, sass/modules/_main.scss */
 .social-nav ul li.mail:hover, .social-nav ul li.mail:active, .social-nav ul li.mail:focus {
   background: url("img/social_sprite.png") no-repeat -66px -88px;
 }
-/* line 714, sass/modules/_main.scss */
+/* line 717, sass/modules/_main.scss */
 .social-nav ul li.twitter {
   background: url("img/social_sprite.png") no-repeat -129px -12px;
 }
-/* line 717, sass/modules/_main.scss */
+/* line 720, sass/modules/_main.scss */
 .social-nav ul li.twitter:hover, .social-nav ul li.twitter:active, .social-nav ul li.twitter:focus {
   background: url("img/social_sprite.png") no-repeat -129px -88px;
 }
-/* line 725, sass/modules/_main.scss */
+/* line 728, sass/modules/_main.scss */
 .social-nav ul li a {
   width: 53px;
   height: 53px;
 }
 
-/* line 736, sass/modules/_main.scss */
+/* line 739, sass/modules/_main.scss */
 footer {
   text-align: center;
   background: #424146;
   padding: 10px 0;
   position: relative;
 }
-/* line 742, sass/modules/_main.scss */
+/* line 745, sass/modules/_main.scss */
 footer p {
   margin: 0;
   padding: 0;
 }
-/* line 748, sass/modules/_main.scss */
+/* line 751, sass/modules/_main.scss */
 footer a:hover, footer a:focus, footer a:active {
   color: #adaca5;
 }
 
-/* line 760, sass/modules/_main.scss */
+/* line 763, sass/modules/_main.scss */
 .sr-only {
   position: absolute;
   width: 1px;
