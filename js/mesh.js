@@ -26,6 +26,11 @@ $('.main-navigation ul li a').click(function(){
 	$(this).parent().addClass('clicked');
 });
 
+$('.sidr ul.menu li a').click(function(){
+	$('.sidr ul li').removeClass('clicked')
+	$(this).parent().addClass('clicked');
+});
+
    //Smooth page scroll
   $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -140,7 +145,13 @@ $('.sidr-trigger').sidr({
       source: '.sidr-nav',
       renaming: false,
       side: 'left',
-      displace: false
+      displace: false,
+      onOpen:function(){
+      	$('.sidr ul.menu li a').click(function(){
+			$('.sidr ul li').removeClass('clicked')
+			$(this).parent().addClass('clicked');
+		})
+      }
   });
 
  $('.sidr-close').click(

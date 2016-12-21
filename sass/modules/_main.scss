@@ -72,13 +72,7 @@ figcaption{
 	z-index:10;
 }
 
-//--__Wayfinder styling, added with click in mesh.js file
-.clicked{
-	a{
-		color:$light-gray;
-	}
-	
-}
+
 
 //Header styles
 
@@ -145,6 +139,14 @@ header{
 			display:inline-block;
 			padding:10px 20px 10px 0;
 			margin:0;
+
+			//--__Wayfinder styling, added with click in mesh.js file
+			&.clicked{
+				a{
+					color:$light-gray;
+				}
+				
+			}
 			a{
 				font-size:1.4em;
 				color:$off-white;
@@ -997,6 +999,14 @@ footer{
 		margin-bottom:0;
 		li{
 			margin:10px 0;
+
+			&.clicked{
+				a{
+					color:$light-gray;
+				}
+				
+			}
+			
 			a{
 				color:$creme;
 				text-transform: uppercase;
