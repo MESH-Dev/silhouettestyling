@@ -175,7 +175,7 @@
 				?>
 
 				<div class="cta">
-					<a class="cta-link" href="<?php echo $acc_link; ?>"><?php echo $acc_link_text; ?></a>
+					<a class="cta-link" href="<?php echo $acc_link; ?>" target="_blank"><?php echo $acc_link_text; ?></a>
 				</div>
 
 				<?php endwhile; ?>
@@ -221,7 +221,7 @@
 				?>
 
 				<div class="cta">
-					<a class="cta-link" href="<?php echo $tip_link; ?>"><?php echo $tip_link_text; ?></a>
+					<a class="cta-link" href="<?php echo $tip_link; ?>" target="_blank"><?php echo $tip_link_text; ?></a>
 				</div>
 
 			<?php endwhile; ?>
