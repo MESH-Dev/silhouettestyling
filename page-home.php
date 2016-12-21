@@ -50,8 +50,8 @@
 					<span class="sr-only">Mission</span>
 					<img alt="Mission" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/mission.png">
 				</h2>
-				<div class="panel-img overlay" data-anchor-target="#mission" data--200-top="top:-2%;" data--100-bottom="top:30%;"><!-- data-stellar-offset-parent="true" data-stellar-ratio=".025" -->
-					<img src="<?php echo $mission_panel_img_url; ?>">
+				<div class="img-portrait panel-img" style="background-image:url('<?php echo $mission_panel_img_url; ?>')" data-anchor-target="#mission" data--200-top="top:-2%;" data--100-bottom="top:30%;"><!-- data-stellar-offset-parent="true" data-stellar-ratio=".025" -->
+					<!-- <img src="<?php echo $mission_panel_img_url; ?>"> -->
 				</div>
 				<h3 class="intro"><?php echo $mission_statement; ?></h3>
 			</article>
@@ -63,7 +63,7 @@
 
 		?>
 		<section id="services">
-			<div class="section-logo even">
+			<div class="section-logo even viewport-bulge">
 				<span class="sr-only">Mission</span>
 				<img alt="Mission" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/services.png">
 			</div>
@@ -160,10 +160,10 @@
 				$acc_intro = get_field('acc_intro');
 				$acc_statement = get_field('acc_stmt');
 				$acc_horz_img = get_field('acc_horiz_img');
-				$acc_horz_img_url = $acc_horz_img['sizes']['product-portrait'];
+				$acc_horz_img_url = $acc_horz_img['sizes']['large'];
 				$acc_h_img_caption = get_field('acc_horiz_img_cptn');
 				$acc_vert_img = get_field('acc_vert_img');
-				$acc_vert_img_url = $acc_vert_img['sizes']['product-landscape'];
+				$acc_vert_img_url = $acc_vert_img['sizes']['large'];
 				$acc_v_img_caption = get_field('acc_vert_img_cptn');
 
 			?>
@@ -179,18 +179,18 @@
 				</div>
 
 				<?php endwhile; ?>
-			<div class="accessories-statement"><?php echo $acc_statement; ?></div>
+			<div class="accessories-statement viewport-bulge"><?php echo $acc_statement; ?></div>
 			<div class="row">
 				<div class="product-wrapper "><!-- eight columns -->
 					<div class="vert-product" data-anchor-target="#accessories" data--100-top="bottom:-2%;" data--250-bottom="bottom:40%;">
-						<div class="overlay">
-							<img src="<?php echo $acc_vert_img_url; ?>">
+						<div class="img-portrait" style="background-image:url('<?php echo $acc_vert_img_url; ?>')">
+							<span class="sr-only"></span>
 						</div>
 						<figcaption><?php echo $acc_v_img_caption ?></figcaption>
 					</div>
 					<div class="horiz-product" data-anchor-target="#accessories" data--100-top="top:20%;" data--250-bottom="top:-5%;">
-						<div class="overlay">
-							<img src="<?php echo $acc_horz_img_url; ?>">
+						<div class="img-landscape" style="background-image:url('<?php echo $acc_horz_img_url; ?>')">
+							<span class="sr-only"></span>
 						</div>
 						<figcaption><?php echo $acc_h_img_caption ?></figcaption>
 					</div>
@@ -259,24 +259,24 @@
 		?>
 
 		<section id="about">
-			<div class="section-logo">
+			<div class="section-logo viewport-bulge">
 				<span class="sr-only">About Us</span>
 				<img alt="About Us" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/about.png">
 			</div>
 
 			<h3 class="intro"><?php echo $b_statement; ?></h3>
-			<div class="au-content-top">
+			<div class="au-content-top viewport-bulge">
 				<?php echo $au_top; ?>
 			</div>
 			<div class="au-img-content" id="au-imgs">
-				<div class="au-img overlay" data-anchor-target="#about" data--200-top="top:20%;" data--250-bottom="top:-2%;">
-					<img src="<?php echo $au_img_url; ?>" />
+				<div class="img-about au-img" style="background-image:url('<?php echo $au_img_url; ?>');" data-anchor-target="#about" data--200-top="top:20%;" data--250-bottom="top:-2%;">
+					<span class="sr-only"></span>
 				</div>
 				<div class="sig-img" data-anchor-target="#about" data--200-top="bottom:-5%" data--100-bottom="bottom:40%;">
 					<img src="<?php bloginfo( 'template_directory' ); ?>/img/signature.png ">
 				</div>
 			</div>
-			<div class="au-content-bottom">
+			<div class="au-content-bottom viewport-bulge">
 				<?php echo $au_bottom; ?>
 			</div>
 

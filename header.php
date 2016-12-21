@@ -42,7 +42,7 @@
 	<div id="page" class='hfeed site'>
 
 		<header>
-			<?php get_template_part('/partials/main-nav')?>
+			
 				
 					
 		</header>
