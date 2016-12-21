@@ -179,7 +179,9 @@
 				</div>
 
 				<?php endwhile; ?>
+			<?php if ($acc_statement != ''){ ?>
 			<div class="accessories-statement viewport-bulge"><?php echo $acc_statement; ?></div>
+			<?php } ?>
 			<div class="row">
 				<div class="product-wrapper "><!-- eight columns -->
 					<div class="vert-product" data-anchor-target="#accessories" data--100-top="bottom:-2%;" data--250-bottom="bottom:40%;">

@@ -33,6 +33,17 @@
 	<script src="https://use.typekit.net/poz6gzr.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
+	<!-- Bugherd
+	================================================== -->
+	<script type='text/javascript'>
+	(function (d, t) {
+	  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+	  bh.type = 'text/javascript';
+	  bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=1yeixj6bsukx9jyw9ohrrw';
+	  s.parentNode.insertBefore(bh, s);
+	  })(document, 'script');
+	</script>
+
 	<?php wp_head(); ?>
 
 </head>

@@ -1526,7 +1526,7 @@ input:-ms-input-placeholder {
 /* line 749, sass/modules/_main.scss */
 .product-wrapper {
   position: relative;
-  height: 60vh;
+  height: 80vh;
   z-index: 5;
 }
 
