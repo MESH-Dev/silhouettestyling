@@ -66,15 +66,24 @@ figcaption{
 		}
 }
 
+//--__Pushes certain elements out in the viewport using z-index (for parallax elements)
 .viewport-bulge{
 	position:relative;
 	z-index:10;
 }
 
+//--__Wayfinder styling, added with click in mesh.js file
+.clicked{
+	a{
+		color:$light-gray;
+	}
+	
+}
+
 //Header styles
 
 header{
-	position:absolute;
+	//position:absolute;
 	width:100%
 }
 
@@ -109,6 +118,10 @@ header{
 		width:100%;
 	}
 
+	.sidr-close{
+		display:none;
+	}
+
 	.nav-bg{
 		background:$dark_gray;
 		height:45px;
@@ -119,6 +132,12 @@ header{
 	#headerMenuLeft{
 		//margin-left:13.33333%;
 		text-align:right;
+
+		ul{
+			li:nth-child(3){
+				// padding-right:0;
+			}
+		}
 	}
 	ul{
 		list-style-type: none;
@@ -144,6 +163,10 @@ header{
 
 @media only screen and (max-width:750px){
 	.main-navigation{
+		#headerMenuRight,
+		#headerMenuLeft{
+			display:none;
+		}
 		ul{
 			li{
 				a{
@@ -232,6 +255,10 @@ header{
 		width:300px;
 	}
 
+	
+}
+
+@media only screen and (max-width:650px){
 	[class^="img-"]{
 		margin:0 auto;
 	}
@@ -367,18 +394,25 @@ section{
 			position:relative;
 
 			div{
-				width:90% !important;
+				width:100% !important;
 				margin:0 auto;
+				font-size:1.6em;
 			}
 
 			div:first-child{
+				background:#000000;
 				a{
-					background:#000000;
+					
 					img{
 						display:block;
 						opacity:.8;
 					}
 				}
+			}
+
+			div:nth-of-type(2){
+				font-size:1.6em;
+				display:none;
 			}
 
 			p{
@@ -485,6 +519,46 @@ section{
 
 }
 
+@media only screen and (max-width:1100px){
+	section{
+		&#accessories{
+
+			.vert-product{
+				left:5%
+			}
+			
+			.horiz-product{
+				right:5%;
+			}
+		}
+	}
+}
+@media only screen and (max-width:900px){
+	section{
+
+		&#services{
+			.service-block{
+				height:auto;
+			}
+		}
+
+		&#accessories{
+
+			.vert-product{
+				left:0;
+			}
+			
+			.horiz-product{
+				right:0;
+			}
+
+			figcaption{
+				font-size:1.4em;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width:750px){
 	section{
 		.intro{
@@ -505,23 +579,12 @@ section{
 			}
 		}
 
-		&#services{
-			.service-block{
-				height:auto;
-			}
-		}
-
 		&#accessories{
-
-			.product-wrapper{
-				height:auto;
-			}
-
 			.vert-product,
 			.horiz-product{
-				position:static;
-				margin-bottom:2em;
-				text-align:center;
+				figcaption{
+					width:100%;
+				}
 			}
 		}
 
@@ -534,9 +597,9 @@ section{
 		&#about{
 			.au-content-top,
 			.au-content-bottom{
-			width:100%;
-			margin:3em auto;
-		}
+				width:100%;
+				margin:3em auto;
+			}
 
 			.au-img-content{
 				position:relative;
@@ -564,6 +627,36 @@ section{
 	}
 }
 
+@media only screen and (max-width:650px){
+	section{
+		&#accessories{
+
+			.product-wrapper{
+				height:auto;
+			}
+
+			.vert-product{
+				text-align:left;
+				position:static;
+				width:300px
+			}
+			.horiz-product{
+				position:static;
+				//margin-bottom:2em;
+				width:300px;
+				//text-align:right;
+			}
+
+			.vert-product,
+			.horiz-product{
+				text-align:center;
+				margin:0 auto;
+			}
+
+		}
+	}
+}
+
 @media only screen and (max-width:550px){
 	section{
 		&#mission{
@@ -571,6 +664,16 @@ section{
 				display:none;
 			}
 		}
+
+		&#accessories{
+			.vert-product,
+			.horiz-product{
+				text-align:center;
+				position:static;
+				margin-bottom:2em;
+			}
+		}
+
 	}
 
 }
@@ -752,7 +855,7 @@ input:-ms-input-placeholder{
 	z-index:5;
 }
 
-@media only screen and (max-width:750px){
+@media only screen and (max-width:550px){
 	.product-wrapper{
 	height:auto;
 	}
@@ -847,6 +950,79 @@ footer{
 }
 
 
+//sidr
+
+.sidr-trigger{
+	color:$creme;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size:1.6em;
+    position:relative;
+    z-index:100;
+    cursor:pointer;
+
+    &:hover,
+    &:focus,
+    &:active{
+    	color:$light-gray;
+    }
+}
+
+.sidr{
+	// font-size:1.8em;
+	background-color:$dark-grey;
+
+	.columns{
+		float:none;
+	}
+
+	.sidr-close{
+		//height:45px;
+		padding:10px 20px;
+		color:white;
+		text-transform: uppercase;
+		font-size:1.8em;
+		cursor:pointer;
+
+		&:hover,
+		&:active,
+		&:focus{
+			color:$light-grey;
+		}
+	}
+
+	ul{
+		list-style-type:none;
+		margin-left:20px;
+		margin-bottom:0;
+		li{
+			margin:10px 0;
+			a{
+				color:$creme;
+				text-transform: uppercase;
+				font-size:1.6em;
+
+				&:hover,
+				&:active,
+				&:focus{
+					color:$light-gray;
+				}
+			}
+		}
+	}
+}
+
+//Mobile helpers
+
+.desktop-hide{
+	display:none;
+}
+
+@media only screen and (max-width:750px){
+	.desktop-hide{
+		display:block;
+	}
+}
 
 
 //Accessibility

@@ -13,8 +13,18 @@ jQuery(document).ready(function($){
 var wWidth = $(window).width();
 
 if(wWidth > 768){
-var s = skrollr.init();
+var s = skrollr.init({
+	easing:'swing',
+	edgeStrategy:'ease',
+});
 }
+
+//Nav wayfinder
+
+$('.main-navigation ul li a').click(function(){
+	$('.main-navigation ul li').removeClass('clicked')
+	$(this).parent().addClass('clicked');
+});
 
    //Smooth page scroll
   $(function() {
@@ -123,5 +133,21 @@ $(function(){
     });
 });
 
+
+//Sidr funcitonality
+$('.sidr-trigger').sidr({
+      name: 'sidr-main',
+      source: '.sidr-nav',
+      renaming: false,
+      side: 'left',
+      displace: false
+  });
+
+ $('.sidr-close').click(
+    function(){
+      $.sidr('close', 'sidr-main');
+       //console.log("Sidr should be closed");
+    });
+//---------------------------------------------
 
 });

@@ -52,8 +52,4 @@
 
 	<div id="page" class='hfeed site'>
 
-		<header>
-			
-				
-					
-		</header>
+		
