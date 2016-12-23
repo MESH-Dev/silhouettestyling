@@ -81,7 +81,7 @@
 
 				<?php endwhile; ?>
 				<div class="row  service-block">
-				<div class="service-container six columns">
+				<div class="service-container seven columns">
 					<ul>
 					<?php $svc_ctr=0; 
 						while (have_rows('services')):the_row();
@@ -101,24 +101,39 @@
 
 						if($svc_ctr == 1){
 							$svc_ctr_image = $svc_ctr_img_1;
+							$bg_pos = 'center top';
+							$pos = 'first';
 						}elseif ($svc_ctr==2){
 							$svc_ctr_image = $svc_ctr_img_2;
+							$bg_pos = 'center 4%';
+							$pos = 'second';
 						}elseif ($svc_ctr==3){
 							$svc_ctr_image = $svc_ctr_img_3;
+							$bg_pos = 'center 50%';
+							$pos = 'third';
 						}elseif ($svc_ctr==4){
 							$svc_ctr_image = $svc_ctr_img_4;
+							$bg_pos = 'center bottom';
+							$pos = 'fourth';
 						}
 					?>
 						<li <?php if ($svc_ctr=="1"){echo 'class="active"'; }?>> 
-							<h4 class="service-title"><?php echo $service_title; ?></h4>
-							<p><?php echo $service_intro; ?></p>
+							<div class="row">
+								<!-- <div class="ten columns"> -->
+									<h4 class="service-title"><?php echo $service_title; ?></h4>
+									<p class="service-intro"><?php echo $service_intro; ?></p>
+								<!-- </div> -->
+								<!-- <div class="row-arrow <?php echo $pos; ?> two columns" > --><!-- style="background-image:url('<?php echo $svc_ctr_image; ?>'); background-position:<?php echo $bg_pos; ?>"-->
+									<!-- <img src="<?php echo $svc_ctr_image; ?>"> -->
+								<!-- </div> -->
+							</div>
 							<ul class="services-nav">
 								<li>
 									<div class="row service-sub">
-										<div class="row-arrow two columns">
-											<img src="<?php echo $svc_ctr_image; ?>">
+										<div class="row-arrow two columns" style="background-image:url('<?php echo $svc_ctr_image; ?>'); background-position:<?php echo $bg_pos; ?>">
+											<img src="<?php echo $svc_ctr_image; ?>" style="opacity:0;">
 										</div>
-										<div class="ten columns">
+										<div class="nine columns"><!--  -->
 											<div class="service-content">
 											<?php echo $service_content; ?>
 											</div> <!-- end service-content -->
@@ -274,7 +289,7 @@
 				<div class="img-about au-img" style="background-image:url('<?php echo $au_img_url; ?>');" data-anchor-target="#about" data--200-top="top:20%;" data--250-bottom="top:-2%;">
 					<span class="sr-only"></span>
 				</div>
-				<div class="sig-img" data-anchor-target="#about" data--200-top="bottom:-5%" data--100-bottom="bottom:40%;">
+				<div class="sig-img" data-anchor-target="#about" data--200-top="bottom:-10%" data--100-bottom="bottom:60%;">
 					<img src="<?php bloginfo( 'template_directory' ); ?>/img/signature.png ">
 				</div>
 			</div>
