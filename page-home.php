@@ -313,7 +313,9 @@
 		<nav class="social-nav">
 			<ul>
 				<li class="facebook">
-					<a href="https://www.facebook.com/silhouettestylingXo/" target="_blank"><span class="sr-only">Like us on Facebook</span></a>
+					<a href="https://www.facebook.com/silhouettestylingXo/" target="_blank">
+						<!-- <span class="sr-only">Like us on Facebook</span> -->
+					</a>
 				</li>
 				<!-- <li class="twitter">
 					<a href="#" target="_blank"><span class="sr-only"></span></a>
@@ -322,7 +324,9 @@
 					<a href="#" target="_blank"><span class="sr-only"></span></a>
 				</li> -->
 				<li class="instagram">
-					<a href="https://www.instagram.com/silhouettestyling/?hl=en" target="_blank"><span class="sr-only">Follow us on Instagram</span></a>
+					<a href="https://www.instagram.com/silhouettestyling/?hl=en" target="_blank">
+						<!-- <span class="sr-only">Follow us on Instagram</span> -->
+					</a>
 				</li>
 			</ul>
 		
