@@ -123,13 +123,14 @@ header{
 
 	}
 
-	#headerMenuLeft{
+	#headerMenuRight{
 		//margin-left:13.33333%;
-		text-align:right;
+		//text-align:right;
+		//margin-left: 8.66667%;
 
 		ul{
-			li:nth-child(3){
-				// padding-right:0;
+			li:nth-child(1){
+				margin-left:15px;
 			}
 		}
 	}
@@ -157,6 +158,18 @@ header{
 				&:focus,
 				&:active{
 					color:$gray;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:850px){
+	.main-navigation{
+		#headerMenuRight{
+			ul{
+				li:nth-child(1){
+					margin-left:0px;
 				}
 			}
 		}
@@ -527,7 +540,7 @@ section{
 
 		&#services{
 			.service-block{
-				height:80vh;
+				height:90vh;
 			}
 		}
 		&#accessories{
@@ -812,6 +825,10 @@ input:-ms-input-placeholder{
 				width:80%;
 				margin:0 auto;
 			}
+
+			.service-wrap{
+				padding-left:20px;
+			}
 			
 			ul.services-nav{
 				position:absolute;
@@ -825,6 +842,8 @@ input:-ms-input-placeholder{
 				display: -ms-flexbox;
 				display: -webkit-flex;
 				align-items: center;
+				width:80%;
+				margin:0 auto;
 
 				li{
 					margin-bottom:.5em;
@@ -842,6 +861,7 @@ input:-ms-input-placeholder{
 					background-repeat:no-repeat;
 					background-size:contain;
 					margin-left:0;
+				    min-width: 60px;
 					img{
 						width:80%;
 					}
@@ -876,7 +896,7 @@ input:-ms-input-placeholder{
 				}
 
 				ul.services-nav{
-					left:100%;	
+					//left:100%;	
 				}
 			}
 
@@ -950,7 +970,7 @@ input:-ms-input-placeholder{
 				}
 				.service-title{
 					//white-space: normal;
-					//font-size:1.4em;
+					font-size:1.4em;
 					//line-height:1.75
 				}
 			}
@@ -985,6 +1005,12 @@ input:-ms-input-placeholder{
 		ul{
 			li{
 
+				&.active{
+					ul.services-nav{
+						left:initial;
+					}
+				}
+
 				.service-intro{
 					//width:100%;
 				}
@@ -993,6 +1019,10 @@ input:-ms-input-placeholder{
 					//white-space: normal;
 					//font-size:1.4em;
 					//line-height:1.75
+				}
+
+				ul.services-nav{
+					left:initial;
 				}
 			}
 		}
@@ -1008,7 +1038,7 @@ input:-ms-input-placeholder{
 }
 
 .service-block{
-	height:60vh;
+	min-height:60vh;
 	display:flex;
 	display: -webkit-box;
 	display: -moz-box;

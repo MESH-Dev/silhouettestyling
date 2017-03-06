@@ -64,8 +64,8 @@
 		?>
 		<section id="services">
 			<div class="section-logo even viewport-bulge">
-				<span class="sr-only">Mission</span>
-				<img alt="Mission" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/services.png">
+				<span class="sr-only">Services</span>
+				<img alt="Services" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/services.png">
 			</div>
 			
 			<h3 class="intro"><?php echo $services_intro;?></h3>
@@ -82,7 +82,7 @@
 				<?php endwhile; ?>
 				<div class="row  service-block">
 				<div class="service-container seven columns">
-					<ul>
+					<ul class="service-items">
 					<?php $svc_ctr=0; 
 						while (have_rows('services')):the_row();
 						$svc_ctr++;
@@ -117,7 +117,7 @@
 							$pos = 'fourth';
 						}
 					?>
-						<li <?php if ($svc_ctr=="1"){echo 'class="active"'; }?>> 
+						<li class="<?php echo $pos; ?> <?php if ($svc_ctr=="1"){echo 'active'; }?>" > 
 							<div class="row">
 								<!-- <div class="ten columns"> -->
 									<h4 class="service-title"><?php echo $service_title; ?></h4>
@@ -126,14 +126,15 @@
 								<!-- <div class="row-arrow <?php echo $pos; ?> two columns" > --><!-- style="background-image:url('<?php echo $svc_ctr_image; ?>'); background-position:<?php echo $bg_pos; ?>"-->
 									<!-- <img src="<?php echo $svc_ctr_image; ?>"> -->
 								<!-- </div> -->
+									<p class="read-more-mobile desktop-hide">read more...</p>
 							</div>
 							<ul class="services-nav">
 								<li>
 									<div class="row service-sub">
-										<div class="row-arrow two columns" style="background-image:url('<?php echo $svc_ctr_image; ?>'); background-position:<?php echo $bg_pos; ?>">
+										<div class="row-arrow" style="background-image:url('<?php echo $svc_ctr_image; ?>'); background-position:<?php echo $bg_pos; ?>"><!-- two columns -->
 											<img src="<?php echo $svc_ctr_image; ?>" style="opacity:0;">
 										</div>
-										<div class="nine columns"><!--  -->
+										<div class="service-wrap"><!--  nine columns -->
 											<div class="service-content">
 											<?php echo $service_content; ?>
 											</div> <!-- end service-content -->
