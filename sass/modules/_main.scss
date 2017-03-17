@@ -153,6 +153,8 @@ header{
 				color:$off-white;
 				text-decoration:none;
 				text-transform:uppercase;
+				font-weight:$brandon_bold;
+				letter-spacing:.3em;
 
 				&:hover,
 				&:focus,
@@ -382,7 +384,7 @@ section{
 		}
 
 		.accessories-statement{
-			width:80%;
+			width:70%;
 			margin:0 auto;
 			position:relative;
 			z-index:10;
@@ -445,7 +447,7 @@ section{
 	&#about{
 		.au-content-top,
 		.au-content-bottom{
-			width:80%;
+			width:70%;
 			margin:3em auto;
 		}
 
@@ -775,7 +777,9 @@ input:-ms-input-placeholder{
 		&.fourth{
 			img{
 				margin-top:-43px;
+				width:46px;
 			}
+
 		}
 
 		img{
@@ -1057,7 +1061,7 @@ input:-ms-input-placeholder{
 
 .product-wrapper{
 	position:relative;
-	height:80vh;
+	height:60vh;
 	z-index:5;
 }
 

@@ -50,7 +50,7 @@
 					<span class="sr-only">Mission</span>
 					<img alt="Mission" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/mission.png">
 				</h2>
-				<div class="img-portrait panel-img" style="background-image:url('<?php echo $mission_panel_img_url; ?>')" data-anchor-target="#mission" data--200-top="top:-2%;" data--100-bottom="top:30%;"><!-- data-stellar-offset-parent="true" data-stellar-ratio=".025" -->
+				<div class="img-portrait panel-img" style="background-image:url('<?php echo $mission_panel_img_url; ?>')" data-anchor-target="#mission" data--800-top="top:-2%;" data-bottom="top:30%;"><!-- data-stellar-offset-parent="true" data-stellar-ratio=".025" -->
 					<!-- <img src="<?php echo $mission_panel_img_url; ?>"> -->
 				</div>
 				<h3 class="intro"><?php echo $mission_statement; ?></h3>
@@ -200,13 +200,13 @@
 			<?php } ?>
 			<div class="row">
 				<div class="product-wrapper "><!-- eight columns -->
-					<div class="vert-product" data-anchor-target="#accessories" data--100-top="bottom:-2%;" data--250-bottom="bottom:40%;">
+					<div class="vert-product" data-anchor-target="#accessories" data--100-top="bottom:-10%;" data--750-bottom="bottom:40%;">
 						<div class="img-portrait" style="background-image:url('<?php echo $acc_vert_img_url; ?>')">
 							<span class="sr-only"></span>
 						</div>
 						<figcaption><?php echo $acc_v_img_caption ?></figcaption>
 					</div>
-					<div class="horiz-product" data-anchor-target="#accessories" data--100-top="top:20%;" data--250-bottom="top:-5%;">
+					<div class="horiz-product" data-anchor-target="#accessories" data--100-top="top:40%;" data--550-bottom="top:-5%;">
 						<div class="img-landscape" style="background-image:url('<?php echo $acc_horz_img_url; ?>')">
 							<span class="sr-only"></span>
 						</div>
@@ -287,10 +287,10 @@
 				<?php echo $au_top; ?>
 			</div>
 			<div class="au-img-content" id="au-imgs">
-				<div class="img-about au-img" style="background-image:url('<?php echo $au_img_url; ?>');" data-anchor-target="#about" data--200-top="top:20%;" data--250-bottom="top:-2%;">
+				<div class="img-about au-img" style="background-image:url('<?php echo $au_img_url; ?>');" data-anchor-target="#about" data-top="top:20%;" data--350-bottom="top:-2%;">
 					<span class="sr-only"></span>
 				</div>
-				<div class="sig-img" data-anchor-target="#about" data--200-top="bottom:-10%" data--100-bottom="bottom:60%;">
+				<div class="sig-img" data-anchor-target="#about" data-top="bottom:-10%" data--500-bottom="bottom:60%;">
 					<img src="<?php bloginfo( 'template_directory' ); ?>/img/signature.png ">
 				</div>
 			</div>
