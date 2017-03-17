@@ -141,7 +141,7 @@ function get_split_nav($menu_name=null, $raw=false){
             $output->left_menu = $menuMarkup;
             //Create right menu
             $menuMarkup = '';
-            $menuMarkup .= '<div id="headerMenuRight" class="four columns offset-by-three">
+            $menuMarkup .= '<div id="headerMenuRight" class="five columns offset-by-two">
                     <ul class="menu">';
             foreach($secondhalf as $item){
                 $menuMarkup .= "<li>

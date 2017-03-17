@@ -131,6 +131,16 @@ header{
 		ul{
 			li:nth-child(1){
 				margin-left:15px;
+
+			}
+		}
+
+		@media only screen and (max-width:900px){
+			ul{
+				li:nth-child(1){
+					margin-left:0px;
+
+				}
 			}
 		}
 	}
@@ -140,6 +150,10 @@ header{
 			display:inline-block;
 			padding:10px 20px 10px 0;
 			margin:0;
+
+			@media only screen and (max-width:900px){
+				padding:10px 10px 10px 0;
+			}
 
 			//--__Wayfinder styling, added with click in mesh.js file
 			&.clicked{
@@ -166,6 +180,22 @@ header{
 	}
 }
 
+@media only screen and (max-width:1000px){
+	.main-navigation{
+		#headerMenuRight,
+		#headerMenuLeft{
+			ul{
+				li{
+					padding:10px 10px 10px 0;
+					a{
+						font-size:1.2em;
+					}
+				}
+			}
+		}
+	}
+}
+
 @media only screen and (max-width:850px){
 	.main-navigation{
 		#headerMenuRight{
@@ -175,7 +205,24 @@ header{
 				}
 			}
 		}
+
+		#headerMenuLeft{
+			&.columns{
+				margin-left:2%;
+			}
+
+			&.five.columns{
+				width:42.33333%;
+			}
+		}
+
+		#headerMenuRight{
+			&.offset-by-two.columns{
+				margin-left: 15.33333%;
+			}
+		}
 	}
+
 }
 
 @media only screen and (max-width:750px){
@@ -756,34 +803,10 @@ input:-ms-input-placeholder{
 		background-size:contain;
 		//margin-left:-20px;
 
-		&.first{
-			img{
-				margin-top:20px;
-			}
-		}
-
-		&.second{
-			img{
-				margin-top:-16px;
-			}
-		}
-
-		&.third{
-			img{
-				margin-top:-30px;
-			}
-		}
-
-		&.fourth{
-			img{
-				margin-top:-43px;
-				width:46px;
-			}
-
-		}
+		
 
 		img{
-			width:80%;
+			//width:80%;
 			display:none;
 		}
 
@@ -793,6 +816,8 @@ input:-ms-input-placeholder{
 			}
 		}
 	}
+
+
 
 	img{
 		max-width:100%;
@@ -807,6 +832,32 @@ input:-ms-input-placeholder{
 
 		li{
 			cursor:pointer;
+
+			&.first{
+				img{
+					//margin-top:20px;
+				}
+			}
+
+			&.second{
+				img{
+					//margin-top:-16px;
+				}
+			}
+
+			&.third{
+				img{
+					//margin-top:-30px;
+				}
+			}
+
+			&.fourth{
+				img{
+					//margin-top:-43px;
+					//width:46px;
+				}
+
+			}
 
 			.service-title{
 				text-align: center;
@@ -851,6 +902,8 @@ input:-ms-input-placeholder{
 
 				li{
 					margin-bottom:.5em;
+
+					
 				}
 
 				.service-content{
@@ -865,9 +918,9 @@ input:-ms-input-placeholder{
 					background-repeat:no-repeat;
 					background-size:contain;
 					margin-left:0;
-				    min-width: 60px;
+				    //min-width: 60px;
 					img{
-						width:80%;
+						//width:80%;
 					}
 				}
 

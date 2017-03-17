@@ -105,7 +105,7 @@
 							$pos = 'first';
 						}elseif ($svc_ctr==2){
 							$svc_ctr_image = $svc_ctr_img_2;
-							$bg_pos = 'center 4%';
+							$bg_pos = 'center 27%';
 							$pos = 'second';
 						}elseif ($svc_ctr==3){
 							$svc_ctr_image = $svc_ctr_img_3;
