@@ -1529,7 +1529,7 @@ section#contact .contact-form .wpcf7-response-output.wpcf7-mail-sent-ok {
   }
   /* line 784, sass/modules/_main.scss */
   section#about .au-img-content {
-    width: 90%;
+    width: auto !important;
   }
   /* line 786, sass/modules/_main.scss */
   section#about .au-img-content .img-about {
