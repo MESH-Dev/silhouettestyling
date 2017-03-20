@@ -316,9 +316,9 @@ header{
 
 	.img-portrait,
 	.img-landscape{
-		// width:auto !important;
+		 width:auto !important;
 		// height:auto;
-		width:80% !important;
+		//width:80% !important;
 		background-image:none !important;
 		background-color:#000 !important;
 		img{
@@ -782,6 +782,7 @@ section{
 
 		&#about{
 			.au-img-content{
+				width:90%;
 				.img-about{
 					background-image:none !important;
 					background-color:#000;
