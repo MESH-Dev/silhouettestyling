@@ -288,7 +288,7 @@
 			</div>
 			<div class="au-img-content" id="au-imgs">
 				<div class="img-about au-img" style="background-image:url('<?php echo $au_img_url; ?>');" data-anchor-target="#about" data-top="top:20%;" data--350-bottom="top:-2%;">
-					<span class="sr-only"></span>
+					<img class="au-portrait" src="<?php echo $au_img_url; ?>">
 				</div>
 				<div class="sig-img" data-anchor-target="#about" data-top="bottom:-10%" data--500-bottom="bottom:60%;">
 					<img src="<?php bloginfo( 'template_directory' ); ?>/img/signature.png ">

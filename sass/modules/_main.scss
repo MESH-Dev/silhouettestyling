@@ -291,22 +291,24 @@ header{
     }
 }
 
-.img-portrait{
-	width:300px;
-	height:419px;
+@media only screen and (min-width:551px){
+	.img-portrait{
+		width:300px;
+		height:419px;
 
-	img{
-		opacity:0;
-		display:block;
+		img{
+			opacity:0;
+			display:block;
+		}
 	}
-}
 
-.img-landscape{
-	height:360px;
-	width:503px;
-	img{
-		opacity:0;
-		display:block;
+	.img-landscape{
+		height:360px;
+		width:503px;
+		img{
+			opacity:0;
+			display:block;
+		}
 	}
 }
 
@@ -524,7 +526,10 @@ section{
 			height:80vh;
 			width:80%;
 			margin:0 auto;
-			
+			img{
+				display:block;
+				opacity:0;
+			}
 		}
 
 		.au-img{
@@ -696,7 +701,7 @@ section{
 			.au-img-content{
 				position:relative;
 				height:auto;
-				width:100%;
+				//width:100%;
 				margin:0 auto
 			}
 
