@@ -315,7 +315,7 @@ header{
 @media only screen and (max-width:550px){
 	.img-portrait,
 	.img-landscape{
-		width:auto;
+		width:auto !important;
 		height:auto;
 		background-image:none !important;
 		img{
@@ -773,6 +773,21 @@ section{
 
 			.horiz-product{
 				height:218px;
+			}
+		}
+
+		#about{
+			.au-img-content{
+				.img-about{
+					background-image:none !important;
+					background-color:#ccc;
+					width:auto !important;
+					height:auto !important;
+				}
+				
+				img{
+					opacity:1;
+				}
 			}
 		}
 
