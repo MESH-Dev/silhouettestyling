@@ -304,9 +304,13 @@ header{
 .img-landscape{
 	height:360px;
 	width:503px;
+	img{
+		opacity:0;
+		display:block;
+	}
 }
 
-@media only screen and (max-width:650px){
+@media only screen and (max-width:550px){
 	.img-portrait,
 	.img-landscape{
 		width:auto;
@@ -715,7 +719,7 @@ section{
 	}
 }
 
-@media only screen and (max-width:650px){
+@media only screen and (max-width:650px) and (min-width: 551px){
 	section{
 		&#accessories{
 
@@ -726,7 +730,7 @@ section{
 			.vert-product{
 				text-align:left;
 				position:static;
-				width:300px
+				width:300px;
 			}
 			.horiz-product{
 				position:static;
@@ -759,6 +763,7 @@ section{
 				text-align:center;
 				position:static;
 				margin-bottom:2em;
+				width:auto;
 			}
 
 			.horiz-product{
