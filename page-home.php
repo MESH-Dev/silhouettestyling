@@ -131,9 +131,9 @@
 							<ul class="services-nav">
 								<li>
 									<div class="row service-sub">
-										<div class="row-arrow" style="background-image:url('<?php echo $svc_ctr_image; ?>'); background-position:<?php echo $bg_pos; ?>"><!-- two columns -->
+										<!-- <div class="row-arrow" style="background-image:url('<?php echo $svc_ctr_image; ?>'); background-position:<?php echo $bg_pos; ?>">
 											<img src="<?php echo $svc_ctr_image; ?>" style="opacity:0;">
-										</div>
+										</div> -->
 										<div class="service-wrap"><!--  nine columns -->
 											<div class="service-content">
 											<?php echo $service_content; ?>
@@ -202,13 +202,13 @@
 				<div class="product-wrapper "><!-- eight columns -->
 					<div class="vert-product" data-anchor-target="#accessories" data--100-top="bottom:-10%;" data--750-bottom="bottom:40%;">
 						<div class="img-portrait" style="background-image:url('<?php echo $acc_vert_img_url; ?>')">
-							<span class="sr-only"></span>
+							<img class="portrait" src="<?php echo $acc_vert_img_url; ?>">
 						</div>
 						<figcaption><?php echo $acc_v_img_caption ?></figcaption>
 					</div>
 					<div class="horiz-product" data-anchor-target="#accessories" data--100-top="top:40%;" data--550-bottom="top:-5%;">
 						<div class="img-landscape" style="background-image:url('<?php echo $acc_horz_img_url; ?>')">
-							<span class="sr-only"></span>
+							<img class="horiz" src="<?php echo $acc_horz_img_url; ?>">
 						</div>
 						<figcaption><?php echo $acc_h_img_caption ?></figcaption>
 					</div>
