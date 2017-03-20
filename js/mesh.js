@@ -180,7 +180,7 @@ $('.sidr-trigger').sidr({
       	$('.sidr ul.menu li a').click(function(){
 			$('.sidr ul li').removeClass('clicked')
 			$(this).parent().addClass('clicked');
-			$('.nav-bg').slideUp(0);
+			$('.nav-bg').stop().slideUp(0);
 		})
       }
   });
