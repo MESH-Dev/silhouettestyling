@@ -142,17 +142,17 @@ $(function(){
 			   // downscroll code
 			   //console.log('scroll down');
 			   //console.log(lastScrollTop + " " + st);
-			   $('.nav-bg').stop().slideUp(50);
+			   $('.nav-bg:not(.sidr-open)').stop().slideUp(50);
 			} else {
 			  // upscroll code
 			  //console.log('scroll up');
-			  $('.nav-bg').slideDown(50);
+			  $('.nav-bg:not(.sidr-open)').slideDown(50);
 			}
 		}else{
 			$('.nav-wrap').css({
 				"position":'absolute'
 			});
-			$('.nav-bg').stop().slideUp(0);
+			$('.nav-bg:not(.sidr-open)').stop().slideUp(0);
 		}	
        lastScrollTop = st;
     });
@@ -177,10 +177,13 @@ $('.sidr-trigger').sidr({
       side: 'left',
       displace: false,
       onOpen:function(){
+      	$('.nav-bg').addClass('sidr-open').slideUp(0);
       	$('.sidr ul.menu li a').click(function(){
 			$('.sidr ul li').removeClass('clicked')
 			$(this).parent().addClass('clicked');
 			$('.nav-bg').stop().slideUp(0);
+
+
 		})
       }
   });
@@ -188,6 +191,7 @@ $('.sidr-trigger').sidr({
  $('.sidr-close').click(
     function(){
       $.sidr('close', 'sidr-main');
+      $('.nav-bg').removeClass('sidr-open');
        //console.log("Sidr should be closed");
     });
 
