@@ -86,6 +86,7 @@ header{
 	width:100%;
 	position: absolute;
 	cursor:pointer;
+	z-index:1000;
 	img{
 		max-width:100%;
 		height:auto;
@@ -102,6 +103,12 @@ header{
 	top:0;
 	position:absolute;
 	z-index: 500;
+}
+
+.nav-wrap.nav-404{
+	.nav-bg{
+		display:block;
+	}
 }
 
 .main-navigation{
@@ -276,6 +283,26 @@ header{
   			max-width:15px;
   		}
   	}
+}
+
+.home-404{
+	height:100vh;
+	width:100%;
+	top:0;
+	margin:0;
+	//position: absolute;
+	background-size:cover;
+	background-position: center center;
+	background-repeat:no-repeat;
+	display:flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: center;
+ 	background-color: #ccc;
+  	background-blend-mode: multiply;
 }
 
 .fullwidth{
@@ -564,6 +591,7 @@ section{
 			width:100%;
 			font-size:1.8em;
 			margin-bottom:0;
+			color:$creme;
 		}
 
 		textarea{
@@ -802,13 +830,29 @@ section{
 
 input::-webkit-input-placeholder{
 	text-transform: uppercase;
+	color:$creme;
+}
+
+textarea::-webkit-input-placeholder{
+	text-transform: uppercase;
+	color:$creme;
 }
 input::-moz-placeholder{
 	text-transform: uppercase;
+	color:$creme;
+}
+textarea::-moz-placeholder{
+	text-transform: uppercase;
+	color:$creme;
 }
 input:-ms-input-placeholder{
 		text-transform: uppercase;
+		color:$creme;
 	}
+textarea:-ms-input-placeholder{
+	text-transform: uppercase;
+	color:$creme;
+}
 
 .intro{
 	text-align:center;
@@ -1257,6 +1301,12 @@ footer{
 	background:$dark-gray;
 	padding:10px 0;
 	position:relative;
+
+	&.footer-404{
+		position:absolute;
+		bottom:0;
+		width:100%;
+	}
 	p{
 		margin:0;
 		padding:0;

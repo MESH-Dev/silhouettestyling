@@ -1,6 +1,6 @@
 </div><!-- #page -->
 
-<footer class="site-footer <?php if( is_page_template('templates/homepage-fullscreen.php') ) { echo "footer-fullscreen"; } ?>">
+<footer class="site-footer <?php if( is_page_template('templates/homepage-fullscreen.php') ) { echo "footer-fullscreen"; } ?> <?php if (is_404()){ ?> footer-404 <?php } ?>">
 
 	<div class=""><!-- container -->
 		<div class="row">

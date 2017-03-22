@@ -47,7 +47,7 @@
 		<section id="mission">
 			<article>
 				<h2 class="section-logo">
-					<span class="sr-only">Mission</span>
+					<span class="sr-only"><h2>Mission</h2></span>
 					<img alt="Mission" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/mission.png">
 				</h2>
 				<div class="img-portrait panel-img" style="background-image:url('<?php echo $mission_panel_img_url; ?>')" data-anchor-target="#mission" data--800-top="top:-2%;" data-bottom="top:30%;"><!-- data-stellar-offset-parent="true" data-stellar-ratio=".025" -->
@@ -64,7 +64,7 @@
 		?>
 		<section id="services">
 			<div class="section-logo even viewport-bulge">
-				<span class="sr-only">Services</span>
+				<span class="sr-only"><h2>Services</h2></span>
 				<img alt="Services" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/services.png">
 			</div>
 			
@@ -167,7 +167,7 @@
 		</section>
 		<section id="accessories">
 			<div class="section-logo">
-				<span class="sr-only">Accessories</span>
+				<span class="sr-only"><h2>Accessories</h2></span>
 				<img alt="Accessories" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/accessories.png">
 			</div>
 
@@ -177,9 +177,11 @@
 				$acc_statement = get_field('acc_stmt');
 				$acc_horz_img = get_field('acc_horiz_img');
 				$acc_horz_img_url = $acc_horz_img['sizes']['large'];
+				$acc_horz_img_alt = $acc_horz_img['alt'];
 				$acc_h_img_caption = get_field('acc_horiz_img_cptn');
 				$acc_vert_img = get_field('acc_vert_img');
 				$acc_vert_img_url = $acc_vert_img['sizes']['large'];
+				$acc_vert_img_alt = $acc_vert_img['alt'];
 				$acc_v_img_caption = get_field('acc_vert_img_cptn');
 
 			?>
@@ -201,15 +203,15 @@
 			<div class="row">
 				<div class="product-wrapper "><!-- eight columns -->
 					<div class="vert-product" data-anchor-target="#accessories" data--100-top="bottom:-10%;" data--750-bottom="bottom:40%;">
-						<div class="img-portrait" style="background-image:url('<?php echo $acc_vert_img_url; ?>')">
-							<img class="portrait" src="<?php echo $acc_vert_img_url; ?>">
-						</div>
+						<figure class="img-portrait" style="background-image:url('<?php echo $acc_vert_img_url; ?>')">
+							<img class="portrait" src="<?php echo $acc_vert_img_url; ?>" alt="<?php echo $acc_vert_img_alt; ?>">
+						</figure>
 						<figcaption><?php echo $acc_v_img_caption ?></figcaption>
 					</div>
 					<div class="horiz-product" data-anchor-target="#accessories" data--100-top="top:40%;" data--550-bottom="top:-5%;">
-						<div class="img-landscape" style="background-image:url('<?php echo $acc_horz_img_url; ?>')">
-							<img class="horiz" src="<?php echo $acc_horz_img_url; ?>">
-						</div>
+						<figure class="img-landscape" style="background-image:url('<?php echo $acc_horz_img_url; ?>')">
+							<img class="horiz" src="<?php echo $acc_horz_img_url; ?>" alt="<?php echo $acc_horz_img_alt; ?>">
+						</figure>
 						<figcaption><?php echo $acc_h_img_caption ?></figcaption>
 					</div>
 				</div>
@@ -225,7 +227,7 @@
 
 		<section id="tips">
 			<div class="section-logo even">
-				<span class="sr-only">Tips</span>
+				<span class="sr-only"><h2>Tips</h2></span>
 				<img alt="Tips" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/tips.png">
 			</div>
 
@@ -278,7 +280,7 @@
 
 		<section id="about">
 			<div class="section-logo viewport-bulge">
-				<span class="sr-only">About Us</span>
+				<span class="sr-only"><h2>About Us</h2></span>
 				<img alt="About Us" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/about.png">
 			</div>
 
@@ -288,10 +290,10 @@
 			</div>
 			<div class="au-img-content" id="au-imgs">
 				<div class="img-about au-img" style="background-image:url('<?php echo $au_img_url; ?>');" data-anchor-target="#about" data-top="top:20%;" data--350-bottom="top:-2%;">
-					<img class="au-portrait" src="<?php echo $au_img_url; ?>">
+					<img class="au-portrait" src="<?php echo $au_img_url; ?>" alt="Portrait of Gusa &amp; Maura">
 				</div>
 				<div class="sig-img" data-anchor-target="#about" data-top="bottom:-10%" data--500-bottom="bottom:60%;">
-					<img src="<?php bloginfo( 'template_directory' ); ?>/img/signature.png ">
+					<img src="<?php bloginfo( 'template_directory' ); ?>/img/signature.png " alt="Gusa &amp; Maura signature">
 				</div>
 			</div>
 			<div class="au-content-bottom viewport-bulge">
@@ -302,8 +304,8 @@
 		</section>
 		<section id="contact">
 			<div class="section-logo even">
-				<span class="sr-only">Contact Us</span>
-				<img alt="Contact Us"src="<?php bloginfo( 'template_directory' ); ?>/img/headers/contactus.png">
+				<span class="sr-only"><h2>Contact Us</h2></span>
+				<img alt="Contact Us" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/contactus.png">
 			</div>
 			<div class="contact-form">
 				<?php echo do_shortcode('[contact-form-7 id="4" title="Contact form"]'); ?>

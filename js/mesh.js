@@ -134,7 +134,7 @@ $(function(){
           return;
        
 		if(window_top > page_top-50) {
-			$('.nav-wrap').css({
+			$('.nav-wrap:not(.nav-404').css({
 				'position':'fixed'
 			});
 
@@ -149,7 +149,7 @@ $(function(){
 			  $('.nav-bg:not(.sidr-open)').slideDown(50);
 			}
 		}else{
-			$('.nav-wrap').css({
+			$('.nav-wrap:not(.nav-404)').css({
 				"position":'absolute'
 			});
 			$('.nav-bg:not(.sidr-open)').stop().slideUp(0);
