@@ -557,10 +557,14 @@ section{
 			height:80vh;
 			width:80%;
 			margin:0 auto;
-			img{
+
+			.img-about{
+				img{
 				display:block;
 				opacity:0;
+				}
 			}
+			
 		}
 
 		.au-img{
