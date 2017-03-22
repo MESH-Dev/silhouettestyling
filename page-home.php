@@ -316,7 +316,7 @@
 			<ul>
 				<li class="facebook">
 					<a href="https://www.facebook.com/silhouettestylingXo/" target="_blank">
-						<!-- <span class="sr-only">Like us on Facebook</span> -->
+						<span class="sr-only">Like us on Facebook</span>
 					</a>
 				</li>
 				<!-- <li class="twitter">
@@ -327,7 +327,7 @@
 				</li> -->
 				<li class="instagram">
 					<a href="https://www.instagram.com/silhouettestyling/?hl=en" target="_blank">
-						<!-- <span class="sr-only">Follow us on Instagram</span> -->
+						<span class="sr-only">Follow us on Instagram</span>
 					</a>
 				</li>
 			</ul>
