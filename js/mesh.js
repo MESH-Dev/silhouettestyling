@@ -134,7 +134,7 @@ $(function(){
           return;
        
 		if(window_top > page_top-50) {
-			$('.nav-wrap:not(.nav-404').css({
+			$('.nav-wrap:not(.nav-404)').css({
 				'position':'fixed'
 			});
 
