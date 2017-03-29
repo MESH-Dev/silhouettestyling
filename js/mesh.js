@@ -74,53 +74,21 @@ $('.service-container ul.service-items li .read-more-mobile').click(function(){
 });
 
 $('.logo img').hover(function(){
-	// setTimeout(function(){
 		$('.nav-bg').slideDown('slow');
-	// },500);
-	
-// },function(){
-// 	setTimeout(function(){
-// 		$('.nav-bg').slideUp('slow');
-// 	},1500);
 	
 });
 
-// $(window).scroll(function(event) {
-		    
-// 		    // height of the document (total height)
-// 		    var d = $(document).height();
-		    
-// 		    // height of the window (visible page)
-// 		    var w = $(window).height();
-		    
-// 		    // scroll level
-// 		    var s = $(this).scrollTop();
-		    
-// 		    // bottom bound - or the width of your 'big footer'
-// 		    var bottomBound = 0; 
+//Set a variable to use to check for clicks to false
+//This is the default state
+$clicked = false;
+//When we click on a nav link, set the value of the $clicked to true
+$('.menu a').click(function(){
+	$clicked = true;
+	console.log($clicked);
+});
 
-// 		    var page_top = $('.fullwidth').offset().top;
-// 		    var fullwidth_top = $('.fullwidth').scrollTop();
-// 		    var window_top = $(window).scrollTop();
-
-// 		    console.log('Fullwidth offset '+page_top);
-// 		    console.log('Fullwidth scrollTop'+fullwidth_top);
-// 		    console.log('Window scrolltop ' + window_top);
-
-// 		    // are we beneath the bottom bound?
-// 		    if(window_top > page_top-50) {
-// 		        // if yes, start scrolling our own way, which is the
-// 		        // bottom bound minus where we are in the page
-// 		        //$('.nav-wrap').addClass('fixed');
-// 		        $('.nav-wrap').slideDown(100);
-// 		    } else {
-// 		        // if we're beneath the bottom bound, then anchor ourselves
-// 		        // to the bottom of the page in traditional footer style
-// 		        //$('.nav-wrap').removeClass('fixed');  
-// 		        $('.nav-wrap').slideUp(100);         
-// 		    }
-// 		});
-
+//As long as $clicked is false, show/hide (slideUp/slideDown) the div housing our nav links
+//based on whether we are scrolling up, or scrolling down. Scrolling down hides, scrolling up shows.
 $(function(){
     var lastScrollTop = 0, delta = 5;
     $(window).scroll(function(event){
@@ -140,13 +108,17 @@ $(function(){
 
 			if (st > lastScrollTop ){
 			   // downscroll code
-			   //console.log('scroll down');
-			   //console.log(lastScrollTop + " " + st);
+			   // Here, we are resetting the $clicked value to false, so that successive scrolling 
+			   // provides our show/hide functionality
 			   $('.nav-bg:not(.sidr-open)').stop().slideUp(50);
+			   $clicked = false;
 			} else {
 			  // upscroll code
-			  //console.log('scroll up');
-			  $('.nav-bg:not(.sidr-open)').slideDown(50);
+			  // Hijacking the normal functionality to test if $clicked is equal to true, or
+			  // whether a nav item has been clicked 			 
+				if($clicked != true){
+					$('.nav-bg:not(.sidr-open)').slideDown(50);
+				}
 			}
 		}else{
 			$('.nav-wrap:not(.nav-404)').css({
@@ -157,17 +129,6 @@ $(function(){
        lastScrollTop = st;
     });
 });
-
-
-// $('.service-items li').each(function(){
-// 	var _top=$(this).position();
-// 	//console.log(_top);
-// 	$(this).find('.row-arrow').css({
-// 		'background-position-x': 'center',
-// 		'background-position-y': _top.top,
-// 		'background-color':'red',
-// 	})
-// })
 
 //Sidr funcitonality
 $('.sidr-trigger').sidr({
