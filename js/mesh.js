@@ -5,18 +5,15 @@ jQuery(document).ready(function($){
 
   //Let's do something awesome!
 
- //stellar parallax - call it, Dood
-   // $(window).stellar({
-   // 	horizontalScrolling: false,
-   // });
-
+// Controls/instantiates scrollr for image element parallax
+// Sniff for window size to avoid issues with devices under 768px
 var wWidth = $(window).width();
 
 if(wWidth > 768){
-var s = skrollr.init({
-	easing:'swing',
-	edgeStrategy:'ease',
-});
+	var s = skrollr.init({
+		easing:'swing',
+		edgeStrategy:'ease',
+	});
 }
 
 //Nav wayfinder
@@ -31,35 +28,33 @@ $('.sidr ul.menu li a').click(function(){
 	$(this).parent().addClass('clicked');
 });
 
-   //Smooth page scroll
-  $(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          //'top-50' is custom.  limits the offset to top of window plus 50px
-          scrollTop: (target.offset().top)
-        }, 800);
-        return false;
-      }
-    }
-  });
+//Smooth page scroll
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+  var target = $(this.hash);
+  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+  if (target.length) {
+    $('html,body').animate({
+      //'top-50' is custom.  limits the offset to top of window plus 50px
+      scrollTop: (target.offset().top)
+    }, 800);
+    return false;
+  }
+}
+});
 });
 
+// Add active class when hovering over service descriptions on > mobile devices
+// Class controls show/hide for service info and other styling
 $('.service-container ul.service-items > li').hover(function(){
 	$('.service-container ul.service-items > li').removeClass('active');
 	$(this).addClass('active');
 });
 
+//Show/hide functionality for the service info on mobile devices
 $clk_cnt = 0;
 $('.service-container ul.service-items li .read-more-mobile').click(function(){
-	// $(this).find('.read-more-mobile').click(function(){
-	// 	//$(this).parent().find('.services-nav').slideDown(200);
-	// 	$(this).parent().find('services-nav').addClass('working');
-	// });
-	//$(this).addClass('working');
 
 	$clk_cnt++
 	if($clk_cnt == 1){
@@ -115,15 +110,20 @@ $(function(){
 			} else {
 			  // upscroll code
 			  // Hijacking the normal functionality to test if $clicked is equal to true, or
-			  // whether a nav item has been clicked 			 
+			  // whether a nav item has been clicked (in that case we want to force a slide up)			 
 				if($clicked != true){
 					$('.nav-bg:not(.sidr-open)').slideDown(50);
+				}else{
+					$('.nav-bg:not(.sidr-open)').stop().slideUp(50);
 				}
 			}
 		}else{
+			// If we are scrolling through the home(top) panel, reset the css for the nav to absolute
+			// Note that we are avoiding the nav on the 404 page by including :not(.nav-404)
 			$('.nav-wrap:not(.nav-404)').css({
 				"position":'absolute'
 			});
+			//Force the nav to slide up if the sidr menu is open
 			$('.nav-bg:not(.sidr-open)').stop().slideUp(0);
 		}	
        lastScrollTop = st;
@@ -138,7 +138,10 @@ $('.sidr-trigger').sidr({
       side: 'left',
       displace: false,
       onOpen:function(){
+      	// Force the nav-bg element to slide up, add a class when sidr is opened
       	$('.nav-bg').addClass('sidr-open').slideUp(0);
+      	// Add you-are-here styling to the links in the sidr nav when clicked, 
+      	// remove the class from any previously clicked link
       	$('.sidr ul.menu li a').click(function(){
 			$('.sidr ul li').removeClass('clicked')
 			$(this).parent().addClass('clicked');
@@ -153,7 +156,6 @@ $('.sidr-trigger').sidr({
     function(){
       $.sidr('close', 'sidr-main');
       $('.nav-bg').removeClass('sidr-open');
-       //console.log("Sidr should be closed");
     });
 
 
