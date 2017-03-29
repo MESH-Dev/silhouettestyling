@@ -292,7 +292,7 @@
 				<div class="img-about au-img" style="background-image:url('<?php echo $au_img_url; ?>');" data-anchor-target="#about" data-top="top:20%;" data--350-bottom="top:-2%;">
 					<img class="au-portrait" src="<?php echo $au_img_url; ?>" alt="Portrait of Gusa &amp; Maura">
 				</div>
-				<div class="sig-img" data-anchor-target="#about" data-top="bottom:-10%" data--500-bottom="bottom:60%;">
+				<div class="sig-img" data-anchor-target="#about" data-top="bottom:-10%" data--500-bottom="bottom:40%;">
 					<img src="<?php bloginfo( 'template_directory' ); ?>/img/signature.png " alt="Gusa &amp; Maura signature">
 				</div>
 			</div>
