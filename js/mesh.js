@@ -82,6 +82,7 @@ $('.menu a').click(function(){
 	console.log($clicked);
 });
 
+
 //As long as $clicked is false, show/hide (slideUp/slideDown) the div housing our nav links
 //based on whether we are scrolling up, or scrolling down. Scrolling down hides, scrolling up shows.
 $(function(){
@@ -146,13 +147,22 @@ $('.sidr-trigger').sidr({
 			$('.sidr ul li').removeClass('clicked')
 			$(this).parent().addClass('clicked');
 			//$('.nav-bg').stop().slideUp(0);
-
+		$('.sidr a').click(function(){
+			$clicked = true;
+			console.log($clicked);
+		});
 
 		})
       }
   });
 
  $('.sidr-close').click(
+    function(){
+      $.sidr('close', 'sidr-main');
+      $('.nav-bg').removeClass('sidr-open');
+    });
+
+ $('.sidr a').click(
     function(){
       $.sidr('close', 'sidr-main');
       $('.nav-bg').removeClass('sidr-open');
