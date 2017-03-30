@@ -107,13 +107,13 @@ $(function(){
 			   // Here, we are resetting the $clicked value to false, so that successive scrolling 
 			   // provides our show/hide functionality
 			   $('.nav-bg:not(.sidr-open)').stop().slideUp(50);
-			   $clicked = false;
+			   //$clicked = false;
 			   console.log($clicked);
 			} else {
 			  // upscroll code
 			  // Hijacking the normal functionality to test if $clicked is equal to true, or
 			  // whether a nav item has been clicked (in that case we want to force a slide up)	
-			  		 
+
 				if($clicked != true){
 					$('.nav-bg:not(.sidr-open)').slideDown(50);
 				}else{
@@ -131,6 +131,7 @@ $(function(){
 			$('.nav-bg:not(.sidr-open)').stop().slideUp(0);
 		}	
        lastScrollTop = st;
+       $clicked = false;
     });
 });
 
