@@ -115,7 +115,7 @@ $(function(){
 				if($clicked != true){
 					$('.nav-bg:not(.sidr-open)').slideDown(50);
 				}else{
-					 $('.nav-bg:not(.sidr-open)').stop().slideUp(50);
+					 $('.nav-bg:not(.sidr-open)').stop();
 					//event.stopPropagation();
 				}
 			}
@@ -167,6 +167,7 @@ $('.sidr-trigger').sidr({
     function(){
       $.sidr('close', 'sidr-main');
       $('.nav-bg').removeClass('sidr-open');
+      $('.nav-bg').slideUp(0);
 	});
 
 
