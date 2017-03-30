@@ -112,7 +112,8 @@ $(function(){
 			} else {
 			  // upscroll code
 			  // Hijacking the normal functionality to test if $clicked is equal to true, or
-			  // whether a nav item has been clicked (in that case we want to force a slide up)			 
+			  // whether a nav item has been clicked (in that case we want to force a slide up)	
+			  $clicked = true;		 
 				if($clicked != true){
 					$('.nav-bg:not(.sidr-open)').slideDown(50);
 				}else{
