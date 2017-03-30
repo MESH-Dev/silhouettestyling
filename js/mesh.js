@@ -108,6 +108,7 @@ $(function(){
 			   // provides our show/hide functionality
 			   $('.nav-bg:not(.sidr-open)').stop().slideUp(50);
 			   $clicked = false;
+			   console.log($clicked);
 			} else {
 			  // upscroll code
 			  // Hijacking the normal functionality to test if $clicked is equal to true, or
@@ -148,10 +149,7 @@ $('.sidr-trigger').sidr({
 			$('.sidr ul li').removeClass('clicked')
 			$(this).parent().addClass('clicked');
 			//$('.nav-bg').stop().slideUp(0);
-		$('.sidr a').click(function(){
-			$clicked = true;
-			console.log($clicked);
-		});
+		
 
 		})
       }
@@ -169,7 +167,10 @@ $('.sidr-trigger').sidr({
       $('.nav-bg').removeClass('sidr-open');
       event.stopPropagation();
 	});
-
+$('.sidr a').click(function(){
+			$clicked = true;
+			console.log($clicked);
+		});
 
 //---------------------------------------------
 
