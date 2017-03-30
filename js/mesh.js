@@ -115,8 +115,8 @@ $(function(){
 				if($clicked != true){
 					$('.nav-bg:not(.sidr-open)').slideDown(50);
 				}else{
-					// $('.nav-bg:not(.sidr-open)').stop().slideUp(50);
-					event.stopPropagation();
+					 $('.nav-bg:not(.sidr-open)').stop().slideUp(50);
+					//event.stopPropagation();
 				}
 			}
 		}else{
@@ -167,7 +167,7 @@ $('.sidr-trigger').sidr({
     function(){
       $.sidr('close', 'sidr-main');
       $('.nav-bg').removeClass('sidr-open');
-    });
+	});
 
 
 //---------------------------------------------
