@@ -461,6 +461,7 @@ section{
 			margin-left:1em;
 			p{
 				text-align:left;
+				margin-bottom:0;
 			}
 		}
 		
@@ -870,12 +871,12 @@ textarea:-ms-input-placeholder{
 	text-align:center;
 	margin:4em 0;
 	.cta-link{
-		padding-right:45px;
+		padding-right:40px;
 		background-image:url('img/arrows/sidearrow.png');
 		background-repeat:no-repeat;
 		background-position:right center;
-		background-size:30px;
-		font-size:1.8em;
+		background-size:25px;
+		font-size:1.4em;
 		text-transform:uppercase;
 		letter-spacing: .05em;
 		font-weight:$brandon_bold;
@@ -923,6 +924,11 @@ textarea:-ms-input-placeholder{
 
 		& > li{
 				margin-bottom:2em;
+				opacity:.5;
+
+				&.active{
+					opacity:1;
+				}
 		}
 
 		li{
@@ -1010,7 +1016,7 @@ textarea:-ms-input-placeholder{
 
 				li{
 					margin-bottom:.5em;
-
+					opacity:1;
 					
 				}
 
@@ -1057,7 +1063,7 @@ textarea:-ms-input-placeholder{
 			&:active,
 			&:focus{
 				.service-title{
-					color:$light-gray;
+					//color:$light-gray;
 				}
 
 				ul.services-nav{

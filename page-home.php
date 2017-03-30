@@ -150,7 +150,7 @@
 											?>
 
 												<h4 class="service-type"><?php echo $additional_service_type; ?></h4>
-												<h5 class="additional-service-title"><?php echo $additional_service_title; ?></h5>
+												<!-- <h5 class="additional-service-title"><?php //echo $additional_service_title; ?></h5> -->
 												<p> <?php echo $additional_service_content; ?></p>
 											<?php } endwhile; endif;?>
 											</div> <!-- end additional service info -->

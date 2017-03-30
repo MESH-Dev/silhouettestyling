@@ -28,7 +28,7 @@ $('.sidr ul.menu li a').click(function(){
 	$(this).parent().addClass('clicked');
 });
 
-//Smooth page scroll
+//Smooth page scroll + page scroll location control
 $(function() {
 $('a[href*=#]:not([href=#])').click(function() {
 if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -36,8 +36,8 @@ if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && lo
   target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
   if (target.length) {
     $('html,body').animate({
-      //'top-50' is custom.  limits the offset to top of window plus 50px
-      scrollTop: (target.offset().top)
+      //'top-100' is custom.  limits the offset to top of window plus 100px
+      scrollTop: (target.offset().top-100)
     }, 800);
     return false;
   }
