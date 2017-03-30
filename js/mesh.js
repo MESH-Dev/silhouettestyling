@@ -75,7 +75,7 @@ $('.logo img').hover(function(){
 
 //Set a variable to use to check for clicks to false
 //This is the default state
-$clicked = false;
+var $clicked;
 //When we click on a nav link, set the value of the $clicked to true
 $('.menu a').click(function(){
 	$clicked = true;
@@ -107,7 +107,7 @@ $(function(){
 			   // Here, we are resetting the $clicked value to false, so that successive scrolling 
 			   // provides our show/hide functionality
 			   $('.nav-bg:not(.sidr-open)').stop().slideUp(50);
-			   //$clicked = false;
+			   $clicked = false;
 			   console.log($clicked);
 			} else {
 			  // upscroll code
@@ -117,7 +117,7 @@ $(function(){
 				if($clicked != true){
 					$('.nav-bg:not(.sidr-open)').slideDown(50);
 				}else{
-					 $('.nav-bg:not(.sidr-open)').stop();
+					 $('.nav-bg:not(.sidr-open)').slideUp(0);
 					//event.stopPropagation();
 				}
 			}
@@ -131,7 +131,7 @@ $(function(){
 			$('.nav-bg:not(.sidr-open)').stop().slideUp(0);
 		}	
        lastScrollTop = st;
-       $clicked = false;
+       //$clicked = false;
     });
 });
 
