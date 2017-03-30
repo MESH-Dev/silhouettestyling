@@ -115,7 +115,8 @@ $(function(){
 				if($clicked != true){
 					$('.nav-bg:not(.sidr-open)').slideDown(50);
 				}else{
-					$('.nav-bg:not(.sidr-open)').stop().slideUp(50);
+					// $('.nav-bg:not(.sidr-open)').stop().slideUp(50);
+					event.stopPropagation();
 				}
 			}
 		}else{
