@@ -88,10 +88,18 @@ header{
 	cursor:pointer;
 	//z-index:1000;
 	img{
-		max-width:100%;
+		//max-width:100%;
 		height:auto;
 		margin-top:2em;
 		max-width:8em;
+	}
+}
+
+@media only screen and (max-width(550px)){
+	.logo{
+		img{
+			max-width:6em;
+		}
 	}
 }
 
@@ -1164,6 +1172,7 @@ textarea:-ms-input-placeholder{
 		}
 		ul{
 			li{
+				opacity:1;
 				ul.services-nav{
 					position:static;
 					display:none;
@@ -1181,7 +1190,7 @@ textarea:-ms-input-placeholder{
 	.service-container{
 		ul{
 			li{
-
+				
 				&.active{
 					ul.services-nav{
 						left:initial;

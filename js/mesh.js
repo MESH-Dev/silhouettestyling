@@ -36,8 +36,8 @@ if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && lo
   target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
   if (target.length) {
     $('html,body').animate({
-      //'top-100' is custom.  limits the offset to top of window plus 100px
-      scrollTop: (target.offset().top-100)
+      //'top-75' is custom.  limits the offset to top of window plus 75px
+      scrollTop: (target.offset().top-75)
     }, 800);
     return false;
   }
