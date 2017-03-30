@@ -2,7 +2,9 @@
 	<div class="nav-wrap <?php if (is_404()){ ?> nav-404 <?php } ?>">
 		
 		<div class="logo"> <!-- two columns -->
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img alt="Silhouette styling logo" src="<?php bloginfo( 'template_directory' ); ?>/img/logo/navigation-xo@2x.png"></a>
+				<!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>"> -->
+					<img alt="Silhouette styling logo" src="<?php bloginfo( 'template_directory' ); ?>/img/logo/navigation-xo@2x.png">
+				<!-- </a> -->
 			</div>
 		<nav class="main-navigation">
 			<div class="nav-bg">
