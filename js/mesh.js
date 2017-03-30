@@ -167,7 +167,7 @@ $('.sidr-trigger').sidr({
     function(){
       $.sidr('close', 'sidr-main');
       $('.nav-bg').removeClass('sidr-open');
-      $('.nav-bg').stop();
+      $('.nav-bg').stopPropagation();
 	});
 
 
