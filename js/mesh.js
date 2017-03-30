@@ -164,10 +164,10 @@ $('.sidr-trigger').sidr({
     });
 
  $('.sidr a').click(
-    function(){
+    function(event){
       $.sidr('close', 'sidr-main');
       $('.nav-bg').removeClass('sidr-open');
-      $('.nav-bg').stopPropagation();
+      event.stopPropagation();
 	});
 
 
