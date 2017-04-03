@@ -121,7 +121,7 @@ $(function(){
 					$('.nav-bg:not(.sidr-showing)').stop().slideDown(50);
 				}
 				else{
-					 $('.nav-bg:not(.sidr-showing)').hide();
+					 $('.nav-bg').stop().hide();
 					//event.stopPropagation();
 				}
 			}
