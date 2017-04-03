@@ -121,9 +121,10 @@ $(function(){
 			  // whether a nav item has been clicked (in that case we want to force a slide up)	
 
 				// if($clicked == false){
-					setTimeout(function(){
+					clearTimeout( $.data( this, "scrollCheck" ) );
+					$.data( this, "scrollCheck",setTimeout(function(){
 						$('.nav-bg:not(.sidr-showing)').slideDown(500);
-					},100);
+					},500));
 					
 				// }
 				// else{
