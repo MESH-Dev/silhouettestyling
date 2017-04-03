@@ -122,7 +122,7 @@ $(function(){
 
 				// if($clicked == false){
 					setTimeout(function(){
-						$('.nav-bg:not(.sidr-showing)').stop().slideDown(100);
+						$('.nav-bg:not(.sidr-showing)').stop(true).slideDown(100);
 					},100);
 					
 				// }
