@@ -173,6 +173,7 @@ $('.sidr-trigger').sidr({
 $('.sidr a').click(function(){
 			$clicked = true;
 			console.log($clicked);
+			$('.nav-bg').slideUp(0);
 		});
 
 //---------------------------------------------
