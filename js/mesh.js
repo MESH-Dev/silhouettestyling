@@ -108,7 +108,7 @@ $(function(){
 			   // downscroll code
 			   // Here, we are resetting the $clicked value to false, so that successive scrolling 
 			   // provides our show/hide functionality
-			   $('.nav-bg:not(.sidr-showing)').stop().slideUp(50);
+			   $('.nav-bg:not(.sidr-showing)').stop(true).slideUp(500);
 			   //Reset $clicked value to false if we are scrolling down
 			   // $clicked = false;
 			   // console.log($clicked);
@@ -118,7 +118,7 @@ $(function(){
 			  // whether a nav item has been clicked (in that case we want to force a slide up)	
 
 				// if($clicked == false){
-					$('.nav-bg:not(.sidr-showing)').stop().slideDown(50);
+					$('.nav-bg:not(.sidr-showing)').stop(true).slideDown(500);
 				// }
 				// else{
 				// 	 $('.nav-bg').stop().hide();
