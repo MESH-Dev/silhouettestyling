@@ -118,7 +118,7 @@ $(function(){
 			  // whether a nav item has been clicked (in that case we want to force a slide up)	
 
 				if($clicked == false){
-					$('.nav-bg:not(.sidr-showing)').slideDown(50);
+					$('.nav-bg:not(.sidr-showing)').stop().slideDown(50);
 				}
 				else{
 					 $('.nav-bg:not(.sidr-showing)').hide();
