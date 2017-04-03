@@ -106,7 +106,7 @@ $(function(){
 			   // downscroll code
 			   // Here, we are resetting the $clicked value to false, so that successive scrolling 
 			   // provides our show/hide functionality
-			   $('.nav-bg:not(.sidr-open)').stop().slideUp(50);
+			   $('.nav-bg:not(.sidr-showing)').stop().slideUp(50);
 			   //Reset $clicked value to false if we are scrolling down
 			   $clicked = false;
 			   console.log($clicked);
@@ -116,10 +116,10 @@ $(function(){
 			  // whether a nav item has been clicked (in that case we want to force a slide up)	
 
 				if($clicked == false){
-					$('.nav-bg:not(.sidr-open)').slideDown(50);
+					$('.nav-bg:not(.sidr-showing)').slideDown(50);
 				}
 				else{
-					 $('.nav-bg:not(.sidr-open)').hide();
+					 $('.nav-bg:not(.sidr-showing)').hide();
 					//event.stopPropagation();
 				}
 			}
@@ -130,7 +130,7 @@ $(function(){
 				"position":'absolute'
 			});
 			//Force the nav to slide up if the sidr menu is open
-			$('.nav-bg:not(.sidr-open)').stop().slideUp(0);
+			$('.nav-bg:not(.sidr-showing)').stop().slideUp(0);
 		}	
        lastScrollTop = st;
        //$clicked = false;
@@ -146,7 +146,7 @@ $('.sidr-trigger').sidr({
       displace: false,
       onOpen:function(){
       	// Force the nav-bg element to slide up, add a class when sidr is opened
-      	$('.nav-bg').addClass('sidr-open').slideUp(0);
+      	$('.nav-bg').addClass('sidr-showing').slideUp(0);
       	// Add you-are-here styling to the links in the sidr nav when clicked, 
       	// remove the class from any previously clicked link
       	$('.sidr ul.menu li a').click(function(){
@@ -162,13 +162,13 @@ $('.sidr-trigger').sidr({
  $('.sidr-close').click(
     function(){
       $.sidr('close', 'sidr-main');
-      $('.nav-bg').removeClass('sidr-open');
+      $('.nav-bg').removeClass('sidr-showing');
     });
 
  $('.sidr a').click(
     function(event){
       $.sidr('close', 'sidr-main');
-      $('.nav-bg').removeClass('sidr-open');
+      $('.nav-bg').removeClass('sidr-showing');
        $('.nav-bg').hide();
       //event.stopPropagation();
 	});
