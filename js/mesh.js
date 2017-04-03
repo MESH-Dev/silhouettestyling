@@ -109,7 +109,7 @@ $(function(){
 			   // Here, we are resetting the $clicked value to false, so that successive scrolling 
 			   // provides our show/hide functionality
 			   // setTimeout(function(){
-			   	$('.nav-bg:not(.sidr-showing)').stop(true).slideUp(500);
+			   	$('.nav-bg:not(.sidr-showing)').stop().slideUp(50);
 			   	// },500);
 			   
 			   //Reset $clicked value to false if we are scrolling down
@@ -122,7 +122,7 @@ $(function(){
 
 				// if($clicked == false){
 					setTimeout(function(){
-						$('.nav-bg:not(.sidr-showing)').stop(true).slideDown(500);
+						$('.nav-bg:not(.sidr-showing)').stop().slideDown(50);
 					},100);
 					
 				// }
