@@ -103,8 +103,8 @@ $(function(){
 			});
 
 			if (st > lastScrollTop ){
-				console.log("ST = "+st);
-				console.log("lastScrollTop = "+lastScrollTop);
+				// console.log("ST = "+st);
+				// console.log("lastScrollTop = "+lastScrollTop);
 			   // downscroll code
 			   // Here, we are resetting the $clicked value to false, so that successive scrolling 
 			   // provides our show/hide functionality
