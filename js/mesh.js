@@ -75,12 +75,12 @@ $('.logo img').hover(function(){
 
 //Set a variable to use to check for clicks to false
 //This is the default state
-var $clicked;
+//var $clicked;
 //When we click on a nav link, set the value of the $clicked to true
-$('.menu a').click(function(){
-	$clicked = true;
-	console.log($clicked);
-});
+// $('.menu a').click(function(){
+// 	$clicked = true;
+// 	console.log($clicked);
+// });
 
 
 //As long as $clicked is false, show/hide (slideUp/slideDown) the div housing our nav links
@@ -110,20 +110,20 @@ $(function(){
 			   // provides our show/hide functionality
 			   $('.nav-bg:not(.sidr-showing)').stop().slideUp(50);
 			   //Reset $clicked value to false if we are scrolling down
-			   $clicked = false;
-			   console.log($clicked);
+			   // $clicked = false;
+			   // console.log($clicked);
 			} else {
 			  // upscroll code
 			  // Hijacking the normal functionality to test if $clicked is equal to true, or
 			  // whether a nav item has been clicked (in that case we want to force a slide up)	
 
-				if($clicked == false){
+				// if($clicked == false){
 					$('.nav-bg:not(.sidr-showing)').stop().slideDown(50);
-				}
-				else{
-					 $('.nav-bg').stop().hide();
-					//event.stopPropagation();
-				}
+				// }
+				// else{
+				// 	 $('.nav-bg').stop().hide();
+				// 	//event.stopPropagation();
+				// }
 			}
 		}else{
 			// If we are scrolling through the home(top) panel, reset the css for the nav to absolute
@@ -172,13 +172,13 @@ $('.sidr-trigger').sidr({
       $.sidr('close', 'sidr-main');
       $('.nav-bg').removeClass('sidr-showing');
        $('.nav-bg').hide();
-      event.stopPropagation();
+      // event.stopPropagation();
 	});
-$('.sidr a').click(function(){
-			$clicked = true;
-			console.log($clicked);
-			//$('.nav-bg').slideUp(0);
-		});
+// $('.sidr a').click(function(){
+// 			$clicked = true;
+// 			console.log($clicked);
+// 			//$('.nav-bg').slideUp(0);
+// 		});
 
 //---------------------------------------------
 
