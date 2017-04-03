@@ -69,7 +69,7 @@ $('.service-container ul.service-items li .read-more-mobile').click(function(){
 });
 
 $('.logo img').hover(function(){
-		$('.nav-bg').slideDown('slow');
+	$('.nav-bg').slideDown('slow');
 	
 });
 
@@ -107,6 +107,7 @@ $(function(){
 			   // Here, we are resetting the $clicked value to false, so that successive scrolling 
 			   // provides our show/hide functionality
 			   $('.nav-bg:not(.sidr-open)').stop().slideUp(50);
+			   //Reset $clicked value to false if we are scrolling down
 			   $clicked = false;
 			   console.log($clicked);
 			} else {
@@ -114,10 +115,11 @@ $(function(){
 			  // Hijacking the normal functionality to test if $clicked is equal to true, or
 			  // whether a nav item has been clicked (in that case we want to force a slide up)	
 
-				if($clicked != true){
+				if($clicked == false){
 					$('.nav-bg:not(.sidr-open)').slideDown(50);
-				}else{
-					 //$('.nav-bg:not(.sidr-open)').slideUp(0);
+				}
+				else{
+					 $('.nav-bg:not(.sidr-open)').hide();
 					//event.stopPropagation();
 				}
 			}
