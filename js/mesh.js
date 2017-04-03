@@ -109,17 +109,17 @@ $(function(){
 			   $('.nav-bg:not(.sidr-open)').stop().slideUp(50);
 			   $clicked = false;
 			   console.log($clicked);
-			} else if($clicked != true) {
+			} else {
 			  // upscroll code
 			  // Hijacking the normal functionality to test if $clicked is equal to true, or
 			  // whether a nav item has been clicked (in that case we want to force a slide up)	
 
-				//if($clicked != true){
+				if($clicked != true){
 					$('.nav-bg:not(.sidr-open)').slideDown(50);
-				//}else{
+				}else{
 					 //$('.nav-bg:not(.sidr-open)').slideUp(0);
 					//event.stopPropagation();
-				//}
+				}
 			}
 		}else{
 			// If we are scrolling through the home(top) panel, reset the css for the nav to absolute
@@ -167,7 +167,7 @@ $('.sidr-trigger').sidr({
     function(event){
       $.sidr('close', 'sidr-main');
       $('.nav-bg').removeClass('sidr-open');
-       $('.nav-bg').slideUp(0);
+       $('.nav-bg').hide();
       //event.stopPropagation();
 	});
 $('.sidr a').click(function(){
