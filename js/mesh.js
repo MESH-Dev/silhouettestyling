@@ -109,7 +109,7 @@ $(function(){
 			   $('.nav-bg:not(.sidr-open)').stop().slideUp(50);
 			   $clicked = false;
 			   console.log($clicked);
-			} else {
+			} else if($clicked != true) {
 			  // upscroll code
 			  // Hijacking the normal functionality to test if $clicked is equal to true, or
 			  // whether a nav item has been clicked (in that case we want to force a slide up)	
