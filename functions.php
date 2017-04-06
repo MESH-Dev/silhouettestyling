@@ -8,7 +8,7 @@ include('functions/clean.php');
 function my_custom_login_logo() {
   echo '<style type="text/css">
 		        h1 a {
-		          background-size: 227px 85px !important;
+		          background-size: contain !important;
 		          margin-bottom: 20px !important;
 		          background-image:url('.get_bloginfo('template_directory').'/img/logo/navigation-xo@2x.png) !important; }
 		    </style>';
