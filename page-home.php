@@ -40,7 +40,7 @@
 		<?php 
 
 		$mission_panel_img = get_field("mission_panel_image");
-		$mission_panel_img_url = $mission_panel_img['sizes']['medium'];
+		$mission_panel_img_url = $mission_panel_img['sizes']['large'];
 		$mission_statement = get_field('mission_statement');
 
 		?>
@@ -50,10 +50,11 @@
 					<span class="sr-only"><h2>Mission</h2></span>
 					<img alt="Mission" src="<?php bloginfo( 'template_directory' ); ?>/img/headers/mission.png">
 				</h2>
-				<div class="img-portrait panel-img" style="background-image:url('<?php echo $mission_panel_img_url; ?>')" data-anchor-target="#mission" data--800-top="top:-2%;" data-bottom="top:30%;"><!-- data-stellar-offset-parent="true" data-stellar-ratio=".025" -->
-					<!-- <img src="<?php echo $mission_panel_img_url; ?>"> -->
-				</div>
 				<h3 class="intro"><?php echo $mission_statement; ?></h3>
+				<div class="img-portrait panel-img" style="background-image:url('<?php echo $mission_panel_img_url; ?>')" data-anchor-target="#mission" data--800-top="top:-2%;" data-bottom="top:30%;"><!-- data-stellar-offset-parent="true" data-stellar-ratio=".025" -->
+					<img src="<?php echo $mission_panel_img_url; ?>">
+				</div>
+				
 			</article>
 		</section>
 

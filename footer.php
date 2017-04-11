@@ -5,7 +5,7 @@
 	<div class=""><!-- container -->
 		<div class="row">
 			<div class="twelve columns">
-				<p>Copyright <?php echo date('Y');?> Silhouette Styling. Site by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
+				<p>Copyright <?php echo date('Y');?> Silhouette Styling. Phone: 703-801-9329. Site by <a href="http://meshfresh.com" target="_blank">MESH</a></p>
 			</div><!-- End of Footer -->
 		</div>
 	</div>

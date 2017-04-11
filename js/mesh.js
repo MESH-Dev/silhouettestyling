@@ -9,7 +9,7 @@ jQuery(document).ready(function($){
 // Sniff for window size to avoid issues with devices under 768px
 var wWidth = $(window).width();
 
-if(wWidth > 768){
+if(wWidth > 1024){
 	var s = skrollr.init({
 		easing:'swing',
 		edgeStrategy:'ease',

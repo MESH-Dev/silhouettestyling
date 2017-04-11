@@ -447,6 +447,9 @@ section{
 		.panel-img{
 			right:10%;
 			//top:10%;
+			img{
+				display:none;
+			}
 
 		}
 
@@ -715,8 +718,12 @@ section{
 		}
 
 		&#mission{
+
+			.panel-img{
+				margin:0 auto;
+			}
 			h3{
-				margin:2em auto 0 auto;
+				margin:2em auto 2em auto;
 				width:100%;
 			}
 		}
@@ -758,6 +765,7 @@ section{
 
 			.au-img{
 				position:static;
+				margin:0 auto;
 			}
 
 			.sig-img{
@@ -810,7 +818,10 @@ section{
 	section{
 		&#mission{
 			.panel-img{
-				display:none;
+				//display:none;
+				img{
+					display:block;
+				}
 			}
 		}
 
