@@ -1367,6 +1367,13 @@ footer{
 			color:$light-gray;
 		}
 	}
+
+	@media only screen and (max-width:550px){
+		.info-wrap{
+			display:block;
+
+		}
+	}
 }
 
 

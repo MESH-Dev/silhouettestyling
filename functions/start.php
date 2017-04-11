@@ -46,51 +46,6 @@ register_sidebar( array(
     'after_title' => '</h3>',
 ) );
 
-// //Split nav into two parts, and render it in main-navigation
-// //Get our menu object
-// $menu_name = 'main_nav';
-//      //Check to see if our menu object exists and is set
-//      if(($locations = get_nav_menu_locations()) && isset($locations[$menu_name])){
-//           $menu = wp_get_nav_menu_object($locations[$menu_name]);
-//           $menu_items = wp_get_nav_menu_items($menu->term_id);
-
-//           //Create a new array with just the top level objects
-//           $newMenu = array();
-//           foreach($menu_items as $item){
-//                if($item->menu_item_parent != 0) continue;
-//                array_push($newMenu, $item);
-//           }
-
-//           //Split menu array in half
-//           $len = count($newMenu);
-//           $firsthalf = array_slice($newMenu, 0, $len / 2);
-//           $secondhalf = array_slice($newMenu, $len / 2);
-
-//           //Create nav
-//           echo '<nav class="main-navigation">';
-//           echo '<div class="container">';
-
-//           //Create left menu
-//           echo '<div id="headerMenuLeft" class="five columns"><ul>';
-//           foreach($firsthalf as $item){
-//                echo "<li><a href='".$item->url."'>".$item->title."</a></li>";
-//           }
-//           echo '</ul></div>'; "endphp markup here"*/
-
-        // Add logo markup here
-
-//           "start php markup here"//Create right menu
-//           echo '<div id="headerMenuRight" class="five columns"><ul>';
-//           foreach($secondhalf as $item){
-//                echo "<li><a href='".$item->url."'>".$item->title."</a></li>";
-//           }
-//           echo '</ul></div>';
-
-//           echo '</div>';
-//           //end nav
-//           echo '</nav>';
-// }
-
 
 function get_split_nav($menu_name=null, $raw=false){
     if($menu_name == null || !is_string($menu_name)){
