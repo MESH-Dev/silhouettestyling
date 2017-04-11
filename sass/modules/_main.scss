@@ -357,7 +357,7 @@ header{
 		background-image:none !important;
 		background-color:#000 !important;
 		img{
-			opacity:.7;
+			opacity:.8;
 			display:block;
 		}
 	}
@@ -800,14 +800,17 @@ section{
 			}
 			.horiz-product{
 				position:static;
+				float:right;
 				//margin-bottom:2em;
-				width:300px;
-				//text-align:right;
+				//width:300px;
+				text-align:right;
 				//margin:0 auto;
 			}
 
 			figure{
 				margin-bottom:1em;
+				margin-left:0;
+				margin-right:0;
 			}
 
 			.vert-product,
@@ -838,6 +841,7 @@ section{
 				position:static;
 				margin-bottom:2em;
 				width:auto;
+				float:none;
 			}
 
 			.horiz-product{
@@ -856,7 +860,7 @@ section{
 				}
 				
 				.au-portrait{
-					opacity:.7 !important;
+					opacity:.8 !important;
 				}
 			}
 		}
